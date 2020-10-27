@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes){
 
-    let Park = sequelize.define("Park", {
+    let Park = sequelize.define("park", {
         //park data
         id: {
             type: DataTypes.STRING,
