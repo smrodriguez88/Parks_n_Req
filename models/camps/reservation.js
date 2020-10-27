@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Reservation.associate = function(models) {
-        Reservation.belongsTo(models.Park, {
+        Reservation.belongsTo(models.Camp, {
           foreignKey: {
             allowNull: false
           }

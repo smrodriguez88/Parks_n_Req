@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     ContactInfo.associate = function(models) {
-        ContactInfo.belongsTo(models.Park, {
+        ContactInfo.belongsTo(models.Camp, {
           foreignKey: {
             allowNull: false
           }

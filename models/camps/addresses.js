@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Addresses.associate = function(models) {
-        Addresses.belongsTo(models.Park, {
+        Addresses.belongsTo(models.Camp, {
           foreignKey: {
             allowNull: false
           }

@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Campsites.associate = function(models) {
-        Campsites.belongsTo(models.Park, {
+        Campsites.belongsTo(models.Camp, {
           foreignKey: {
             allowNull: false
           }

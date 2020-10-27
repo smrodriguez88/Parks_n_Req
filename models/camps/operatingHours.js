@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     OperatingHours.associate = function(models) {
-        OperatingHours.belongsTo(models.Park, {
+        OperatingHours.belongsTo(models.Camp, {
           foreignKey: {
             allowNull: false
           }

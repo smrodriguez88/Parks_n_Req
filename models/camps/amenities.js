@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Amenities.associate = function(models) {
-        Amenities.belongsTo(models.Park, {
+        Amenities.belongsTo(models.Camp, {
           foreignKey: {
             allowNull: false
           }

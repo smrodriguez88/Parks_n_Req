@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes){
 
-    let Park = sequelize.define("park", {
-        //park data
+    let Camp = sequelize.define("camp", {
+        //Camp data
         id: {
             type: DataTypes.STRING,
             allowNull: false
@@ -61,32 +61,32 @@ module.exports = function(sequelize, DataTypes){
         },
     });
 
-    Park.associate = function(models){
-        Park.hasMany(models.accessibility, {
+    Camp.associate = function(models){
+        Camp.hasMany(models.accessibility, {
             onDelete: "cascade"
         });
-        Park.hasMany(models.addresses, {
+        Camp.hasMany(models.addresses, {
             onDelete: "cascade"
         });
-        Park.hasMany(models.amenities, {
+        Camp.hasMany(models.amenities, {
             onDelete: "cascade"
         });
-        Park.hasMany(models.campsites, {
+        Camp.hasMany(models.campsites, {
             onDelete: "cascade"
         });
-        Park.hasMany(models.contactInfo, {
+        Camp.hasMany(models.contactInfo, {
             onDelete: "cascade"
         });
-        Park.hasMany(models.fees, {
+        Camp.hasMany(models.fees, {
             onDelete: "cascade"
         });
-        Park.hasMany(models.operatingHours, {
+        Camp.hasMany(models.operatingHours, {
             onDelete: "cascade"
         });
-        Park.hasMany(models.reservation, {
+        Camp.hasMany(models.reservation, {
             onDelete: "cascade"
         });
     };
 
-    return Park;
+    return Camp;
 };
