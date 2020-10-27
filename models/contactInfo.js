@@ -1,6 +1,8 @@
 module.exports = function(sequelize, DataTypes) { 
     let ContactInfo = sequelize.define("contactInfo", {
-        //contacts data
+      //Adress data
+      phoneNumber: DataTypes.STRING,
+      email: DataTypes.STRING
     });
 
     ContactInfo.associate = function(models) {

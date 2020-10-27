@@ -68,6 +68,9 @@ module.exports = function(sequelize, DataTypes){
         Park.hasMany(models.addresses, {
             onDelete: "cascade"
         });
+        Park.hasMany(models.amenities, {
+            onDelete: "cascade"
+        });
         Park.hasMany(models.campsites, {
             onDelete: "cascade"
         });
