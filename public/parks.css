@@ -1,28 +1,37 @@
 
-.cabin {
-    font-family: "Cabin";
+.stat {
+    font-family: "Staatliches";
 }
 
-.sans {
-    font-family: "Open Sans";
+.raleway {
+    font-family: "Raleway";
 }
 
 body {
-    font-family: "Open Sans";
-    background-color: #F4E9E1;
+    background-color: #51594C;
+}
+
+label {
+    font-family: "Staatliches";
+    color: #D9B9A7;
 }
 
 .jumbotron {
-    background-image: url("https://tpwd.texas.gov/state-parks/palo-duro-canyon/gallery/lighthouse-peak.jpg");
-    
+    background-color: #cccccc;
+    color: white;
+    height: 500px;
+    border-bottom: solid 5px #FFFFFF;
 }
 
 .card {
-    border: solid 3px #9B6A59;
+    border: solid 3px #FFFFFF;
+    background-color: #667353;
+    color: #FFFFFF;
 }
 
 
 .btn {
-    background-color: #FEE085;
-    color: #9B6A59;
+    background-color: #9CBCD9;
+    color: #51594C;
+    border: solid 2px #9CBCD9;
 }

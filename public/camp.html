@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin|Open+Sans">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="parks.css">
     <title>Campsite Booking</title>
@@ -19,15 +19,15 @@
     <!--header/park name-->
     <div class="row">
         <div class="col-md-12">
-            <h2 class="text-center">PALO DURO CANYON</h2>
+            <h2 class="text-center stat">PALO DURO CANYON</h2>
         </div>
     </div>
         <div class="row">
             <!--general info card-->
             <div class="col-md-3">
                 <div class="card m-2">
-                    <h5>General Info</h5>
-                    <ul>
+                    <h5 class="stat mx-auto">General Info</h5>
+                    <ul class="raleway mx-auto">
                         <li>operating hours</li>
                         <li>contacts</li>
                         <li>address</li>
@@ -38,8 +38,8 @@
             <!--description card-->
             <div class="col-md-6">
                 <div class="card text-center m-2">
-                    <h3 class="card-title">About Camping</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    <h3 class="card-title stat">About Camping</h3>
+                        <p class="raleway">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Libero qui voluptate ea animi recusandae velit debitis, explicabo repudiandae totam atque quibusdam facilis aspernatur nam. 
                             Ullam ab pariatur neque expedita qui.
                             <br>
@@ -52,10 +52,10 @@
             <!--Pricing card-->
             <div class="col-md-3">
                 <div class="card text-center m-2">
-                    <h5 class="card-title">Pricing/Passes</h5>
-                    <ul>
-                        <li>Price</li>
-                        <li>Pass</li>
+                    <h5 class="card-title stat">Reservations</h5>
+                    <ul class="raleway">
+                        <li>reservations info</li>
+                        <li><button type="button" class="btn btn-dark" href="#modal3">Reserve your spot!</button></li>
                     </ul>
                 </div>
             </div>
@@ -64,11 +64,105 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card m-2">
-                    
+                    <h2 class="stat mx-auto">Camping Reservation</h4>
+                    <div class="form-row mx-5">
+                        <div class="form-group col-md-4">
+                            <label for="inputFirstName">First Name</label>
+                            <input type="firstName" class="form-control raleway" id="inputFirstName" placeholder="First Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputLastName">Last Name</label>
+                            <input type="lastName" class="form-control raleway" id="inputLastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="form-row mx-5">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control raleway" id="inputEmail" placeholder="Email"></input>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputPhone">Phone Number</label>
+                            <input type="phoneNumber" class="form-control raleway" id="inputPhone" placeholder="Phone Number"></input>
+                        </div>
+                    </div>
+                    <div class="form-group mx-5">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control raleway" id="inputAddress" placeholder="1234 Main St">
+                      </div>
+                      <div class="form-group mx-5">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control raleway" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                      </div>
+                      <div class="form-row mx-5">
+                        <div class="form-group col-md-6">
+                          <label for="inputCity">City</label>
+                          <input type="text" class="form-control raleway" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputState">State</label>
+                          <select id="inputState" class="form-control raleway">
+                            <option selected>State</option>
+                            <option>Alabama</option>
+                            <option>Alaska</option>
+                            <option>Arizona</option>
+                            <option>Arkansas</option>
+                            <option>California</option>
+                            <option>Colorado</option>
+                            <option>Connecticut</option>
+                            <option>Delaware</option>
+                            <option>Florida</option>
+                            <option>Georgia</option>
+                            <option>Hawaii</option>
+                            <option>Idaho</option>
+                            <option>Illinois</option>
+                            <option>Indiana</option>
+                            <option>Iowa</option>
+                            <option>Kansas</option>
+                            <option>Kentucky</option>
+                            <option>Louisiana</option>
+                            <option>Maine</option>
+                            <option>Maryland</option>
+                            <option>Massachusetts</option>
+                            <option>Michigan</option>
+                            <option>Minnesota</option>
+                            <option>Mississippi</option>
+                            <option>Missouri</option>
+                            <option>Montana</option>
+                            <option>Nebraska</option>
+                            <option>Nevada</option>
+                            <option>New Hampshire</option>
+                            <option>New Jersey</option>
+                            <option>New Mexico</option>
+                            <option>New York</option>
+                            <option>North Carolina</option>
+                            <option>North Dakota</option>
+                            <option>Ohio</option>
+                            <option>Oklahoma</option>
+                            <option>Oregon</option>
+                            <option>Pennsylvania</option>
+                            <option>Rhode Island</option>
+                            <option>South Carolina</option>
+                            <option>Tennessee</option>
+                            <option>Texas</option>
+                            <option>Utah</option>
+                            <option>Vermont</option>
+                            <option>Vermont</option>
+                            <option>Virginia</option>
+                            <option>Washington</option>
+                            <option>West Virginia</option>
+                            <option>Wisconsin</option>
+                            <option>Wyoming</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="inputZip">Zip</label>
+                          <input type="text" class="form-control raleway" id="inputZip">
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
-<!--amenities modal-->
+<!--accessibility modal-->
     <!-- <div id="modal1" class="modal bottom-sheet">
         <div class="modal-content">
           <h4>Modal Header</h4>
@@ -78,7 +172,7 @@
           <a href="#!" class="modal-close waves-effect waves-green btn-flat"></a>
         </div>
       </div> -->
-<!--accessibility modal-->
+<!--amenities modal-->
       <!-- <div id="modal2" class="modal modal-fixed-footer">
         <div class="modal-content">
           <h4>Modal Header</h4>
