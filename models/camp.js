@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes){
 
     let Camp = sequelize.define("camp", {
         //GENERAL INFO
-        id: {type: DataTypes.STRING, allowNull: false},
+        id: {type: DataTypes.STRING, allowNull: false, primaryKey: true},
         url: {type: DataTypes.STRING, allowNull: true},
         name: {type: DataTypes.STRING, allowNull: false},
         parkCode: {type: DataTypes.STRING, allowNull: false},
