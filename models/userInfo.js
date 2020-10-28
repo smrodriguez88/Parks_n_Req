@@ -1,26 +1,26 @@
 module.exports = function(sequelize, DataTypes) {
     let UserInfo = sequelize.define("userInfo", {
-        uuid: Sequelize.UUID,
+        uuid: DataTypes.UUID,
         firstName: {
-            type: Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
         lastName: {
-            type: Sequelize.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        phone: Sequelize.STRING,
-        email: Sequelize.STRING
+        phone: DataTypes.STRING,
+        email: DataTypes.STRING
     })
 
     UserInfo.associate = function(models) {
-        UserInfo.belongsTo(models.Reservation, {
+        UserInfo.belongsTo(models.reservation, {
           foreignKey: {
             allowNull: false
           }

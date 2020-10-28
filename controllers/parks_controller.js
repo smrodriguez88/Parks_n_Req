@@ -1,18 +1,16 @@
 var Sequelize = require("sequelize");
-var basename = path.basename(module.filename);
-var env = process.env.NODE_ENV || "development";
-var config = require(__dirname + "/../config/config.json")[env];
+const express = require("express");
+const router = express.Router();
 var db = {};
-
-if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable]);
-} else {
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
-}
-
-
 const qs = require('qs')
 const axios = require('axios')
+
+// if (config.use_env_variable) {
+//   var sequelize = new Sequelize(process.env[config.use_env_variable]);
+// } else {
+//   var sequelize = new Sequelize(config.database, config.username, config.password, config);
+// }
+
 
 async function getCampsites(){
     let results = ''
@@ -77,3 +75,5 @@ function campgroundParse(data){
 }
 
 getCampsites()
+
+module.exports = router;
