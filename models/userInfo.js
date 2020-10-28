@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     let UserInfo = sequelize.define("userInfo", {
-        uuid: Sequelize.STRING,
+        uuid: Sequelize.UUID,
         firstName: {
             type: Sequelize.STRING,
             allowNull: false,
