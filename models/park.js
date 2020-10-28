@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes){
         //GENERAL INFO
         url: {type: DataTypes.STRING, allowNull: true},
         fullName: {type: DataTypes.STRING, allowNull: false},
-        id: {type: DataTypes.STRING, allowNull: false},
+        id: {type: DataTypes.STRING, allowNull: false, primaryKey: true},
         parkCode: {type: DataTypes.STRING, allowNull: false},
         description: {type: DataTypes.TEXT, allowNull: false},
         //ADDRESS INFO
