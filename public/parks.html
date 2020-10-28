@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="parks.css">
     <title>Park Name</title>
 </head>
@@ -15,12 +16,21 @@
           <h1 class="display-2">Palo Duro Canyon</h1>
         </div>
     </div>
+
+    <nav class="navbar p-2">
+        <span class="navbar-item stat">NPS Texas</span>
+        <div class="navbar-item">
+            <img src="./img/texas.png" height="50px">
+        </div>
+        <div class="navbar-right">
+            <a class="nav-link raleway" href="#"><i class="fas fa-home"></i></a>
+        </div>
+    </nav>
     
-   
     <div class="row">
         <!--general info card-->
         <div class="col-md-3">
-            <div class="card m-2 p-3 rounded">
+            <div class="card m-2 p-3 my-5 rounded">
                 <h5 class="stat">General Info</h5>
                 <ul class="raleway">
                     <li>operating hours</li>
@@ -31,7 +41,7 @@
         </div>
         <!--description card-->
         <div class="col-md-6">
-            <div class="card text-center m-2 p-3 rounded">
+            <div class="card text-center m-2 my-5 p-3 rounded">
                 <h3 class="card-title stat">About Palo Duro Canyon</h3>
                 <p class="raleway"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Libero qui voluptate ea animi recusandae velit debitis, explicabo repudiandae 
@@ -44,7 +54,7 @@
         </div>
             <!--Pricing card-->
             <div class="col-md-3">
-                <div class="card text-center m-2 p-3 rounded">
+                <div class="card text-center m-2 my-5 p-3 rounded">
                     <h5 class="card-title stat">Pricing & Passes</h5>
                     <ul class="raleway">
                         <li>Price: $5.00</li>
