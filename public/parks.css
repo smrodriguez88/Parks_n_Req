@@ -15,10 +15,15 @@ body {
 
 img {
     border-radius: 2%;
+    width: 100%;
 }
 
 .btn-small {
     background-color: #FEE085 !important;
     color: #9B6A59;
+    width: 100%;
+}
+
+p {
     width: 100%;
 }
