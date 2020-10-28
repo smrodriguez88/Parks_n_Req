@@ -1,0 +1,13 @@
+h2, h4, h5 {
+    font-family: "Cabin" !important;
+}
+
+body {
+    font-family: "Open Sans" !important;
+    background-color: tan !important;
+}
+
+.card {
+    padding: 7% !important;
+    border-radius: 3% !important;
+}
