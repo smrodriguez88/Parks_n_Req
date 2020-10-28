@@ -4,10 +4,10 @@ h2, h4, h5 {
 
 body {
     font-family: "Open Sans" !important;
-    background-color: tan !important;
+    background-color: rgb(241, 222, 196) !important;
 }
 
 .card {
     padding: 7% !important;
-    border-radius: 3% !important;
+    border-radius: 2% !important;
 }
