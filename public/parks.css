@@ -17,6 +17,8 @@ img {
     border-radius: 2%;
 }
 
-.btn {
-    padding: 10% !important;
+.btn-small {
+    background-color: #FEE085 !important;
+    color: #9B6A59;
+    width: 100%;
 }
