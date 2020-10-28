@@ -6,7 +6,7 @@ async function getCampsites(){
     const options = {
         method: 'get',
         url: 'https://developer.nps.gov/api/v1/campgrounds?stateCode=tx&limit=1000',
-        headers: {'X-Api-Key': ''},
+        headers: {'X-Api-Key': 'NJhTiTWhiBpsAaNs9BiZmasF5XIGKPb2Jabrn2HW'},
         data: qs.stringify({'stateCode': 'tx','limit': '2'})
     }
     try {

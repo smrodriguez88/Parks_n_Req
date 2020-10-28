@@ -1,0 +1,4 @@
+
+DROP DATABASE IF EXISTS nps_db;
+
+CREATE DATABASE nps_db;
