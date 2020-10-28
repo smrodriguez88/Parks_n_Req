@@ -1,13 +1,22 @@
-h2, h4, h5 {
+h2, h3, h5 {
     font-family: "Cabin" !important;
 }
 
 body {
     font-family: "Open Sans" !important;
-    background-color: rgb(241, 222, 196) !important;
+    background-color: #F4E9E1 !important;
 }
 
 .card {
     padding: 7% !important;
     border-radius: 2% !important;
+    border: solid 3px #9B6A59;
+}
+
+img {
+    border-radius: 2%;
+}
+
+.btn {
+    padding: 10% !important;
 }
