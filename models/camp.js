@@ -9,7 +9,6 @@ module.exports = function(sequelize, DataTypes){
         description: {type: DataTypes.TEXT, allowNull: false},
         reservationInfo: {type: DataTypes.TEXT, allowNull: false},
         regulations: {type: DataTypes.TEXT, allowNull: false},
-        weatherOverview: {type: DataTypes.TEXT, allowNull: false},
         numberOfSitesReservable: {type: DataTypes.INTEGER, allowNull: false},
         numberOfSitesFirstComeFirstServe: {type: DataTypes.INTEGER, allowNull: false},
         //ACCESSIBILITY
