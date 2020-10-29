@@ -1,0 +1,31 @@
+{
+  "name": "Parks_n_Req",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "qs": "^6.9.4",
+    "sequelize": "5.22.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smrodriguez88/Parks_n_Req.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smrodriguez88/Parks_n_Req/issues"
+  },
+  "homepage": "https://github.com/smrodriguez88/Parks_n_Req#readme"
+}
