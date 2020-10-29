@@ -1,0 +1,52 @@
+
+.stat {
+    font-family: "Staatliches";
+}
+
+.raleway {
+    font-family: "Raleway";
+}
+
+body {
+    background-color: #51594C;
+}
+
+label {
+    font-family: "Staatliches";
+    color: #D9B9A7;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
+    margin-top: 0px;
+    font-size: 20pt;
+}
+
+a {
+    color: #FFFFFF; 
+}
+
+.jumbotron {
+    background-color: #cccccc;
+    color: white;
+    height: 500px;
+    margin-bottom: 0px;
+}
+
+.card {
+    border: solid 3px #FFFFFF;
+    background-color: #667353;
+    color: #FFFFFF;
+}
+
+
+.btn {
+    background-color: #9CBCD9;
+    color: #51594C;
+    border: solid 2px #9CBCD9;
+}
+
+a:hover {
+    color: #51594C;
+}
