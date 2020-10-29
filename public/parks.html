@@ -52,20 +52,20 @@
                     totam atque quibusdam facilis aspernatur nam. Ullam ab pariatur neque expedita qui.
                     <br>
                     <br>
-                    <button type="button" class="btn stat rounded" href="#modal1">Activities</button>
+                    <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal1" id="activitiesBtn">Activities</button>
                 </p>
                 <h3 class="card-title stat">About the Campsite</h3>
                 <p class="raleway">
                     <br>
                     <br>
-                    <button type="button" class="btn stat rounded" href="#modal2">Amenities</button>
-                    <button type="button" class="btn stat rounded" href="#modal3">Regulations</button>
+                    <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal2" id="amenitiesBtn">Amenities</button>
+                    <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal3" id="regulationsBtn">Regulations</button>
             </div>
         </div>
             <!--Pricing card-->
             <div class="col-md-3">
                 <div class="card text-center m-2 my-5 p-3 rounded">
-                    <h5 class="card-title stat">Pricing & Passes</h5>
+                    <h5 class="card-title stat">Park Passes</h5>
                     <ul class="raleway">
                         <li></li>
                         <li></li>
@@ -77,18 +77,66 @@
                 </div>
             </div>
         </div>
-        <!--form-->
         
-<!--activities modal-->
-    <!-- <div id="modal1" class="modal bottom-sheet">
-        <div class="modal-content">
-          <h4>Modal Header</h4>
-          <p>A bunch of text</p>
+<!--parks activities modal-->
+<div class="modal fade bd-example-modal-lg" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Activities</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>some activities will populate here</p>
         </div>
         <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat"></a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
-      </div> -->
+      </div>
+    </div>
+  </div>    
+
+<!--amenities modal-->
+<div class="modal fade bd-example-modal-lg" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Amenities</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>amenities will populate here</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+<!--regulations modal-->
+<div class="modal fade bd-example-modal-lg" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Regulations</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>park regulations will populate here</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> 
 <!--reservation modal-->
       <div class="modal fade bd-example-modal-lg" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -100,6 +148,7 @@
               </button>
             </div>
             <div class="modal-body">
+                <!--reservation form-->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card m-2 p-3 my-5 rounded">
@@ -209,6 +258,8 @@
           </div>
         </div>
       </div>
+
+      <!---->
     
 </body>
 </html>
