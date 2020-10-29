@@ -85,7 +85,7 @@ section{
 .blur{
     width: 100%;
     height: 250px;
-    background-color: black;
+    background-color: rgb(255, 245, 215);
     position: absolute;
     bottom: -170px;
     filter: blur(40px);
@@ -95,7 +95,7 @@ section{
 .content{
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: rgb(255, 245, 215);
     z-index: 0;
     top: 100%;
     position: absolute;
