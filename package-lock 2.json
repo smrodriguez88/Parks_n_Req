@@ -1,0 +1,24 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "axios": {
+      "version": "0.21.0",
+      "resolved": "https://npm.apple.com/axios/-/axios-0.21.0.tgz",
+      "integrity": "sha1-Jt8IiAOiNQ3/LCf5b++Z/klEKso=",
+      "requires": {
+        "follow-redirects": "^1.10.0"
+      }
+    },
+    "follow-redirects": {
+      "version": "1.13.0",
+      "resolved": "https://npm.apple.com/follow-redirects/-/follow-redirects-1.13.0.tgz",
+      "integrity": "sha1-tC6Nk6Kn7qXtiGM2dtZZe8jjhNs="
+    },
+    "qs": {
+      "version": "6.9.4",
+      "resolved": "https://npm.apple.com/qs/-/qs-6.9.4.tgz",
+      "integrity": "sha1-kJCykNH5FyjTwi5UhDykSupatoc="
+    }
+  }
+}
