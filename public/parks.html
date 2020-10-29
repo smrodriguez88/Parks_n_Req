@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="parks.css">
     <script src="parks.js"></script>
-    <title>Park Name</title>
+    <title></title>
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid stat" style='background-image: linear-gradient(rgba(18, 18, 19, 0.50), rgba(18, 18, 19, 0.25)), url("https://tpwd.texas.gov/state-parks/palo-duro-canyon/gallery/lighthouse-peak.jpg")'>
         <div class="container">
-          <h1 class="display-2">Palo Duro Canyon</h1>
+          <h1 class="display-2" id="parkName">Palo Duro Canyon</h1>
         </div>
     </div>
 
@@ -37,25 +37,25 @@
             <div class="card m-2 p-3 my-5 rounded">
                 <h5 class="stat mx-auto">General Info</h5>
                 <ul class="raleway mx-auto">
-                    <li>operating hours</li>
-                    <li>contacts</li>
-                    <li>address</li>
+                    <li id="opHours">operating hours</li>
+                    <li id="contact">contacts</li>
+                    <li id="address">address</li>
                 </ul>
             </div>
         </div>
         <!--description card-->
         <div class="col-md-6">
             <div class="card text-center m-2 my-5 p-3 rounded">
-                <h3 class="card-title stat">About Palo Duro Canyon Park</h3>
-                <p class="raleway"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <h3 class="card-title stat" id="aboutPark">About the park</h3>
+                <p class="raleway" id="parkInfo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Libero qui voluptate ea animi recusandae velit debitis, explicabo repudiandae 
                     totam atque quibusdam facilis aspernatur nam. Ullam ab pariatur neque expedita qui.
                     <br>
                     <br>
                     <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal1" id="activitiesBtn">Activities</button>
                 </p>
-                <h3 class="card-title stat">About the Campsite</h3>
-                <p class="raleway">
+                <h3 class="card-title stat" id="aboutCamp">About the Campsite</h3>
+                <p class="raleway" id="campInfo">
                     <br>
                     <br>
                     <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal2" id="amenitiesBtn">Amenities</button>
@@ -67,8 +67,8 @@
                 <div class="card text-center m-2 my-5 p-3 rounded">
                     <h5 class="card-title stat">Park Passes</h5>
                     <ul class="raleway">
-                        <li></li>
-                        <li></li>
+                        <li id="dayPass"></li>
+                        <li id="passPrice"></li>
                     </ul>
                     <h5 class="card-title stat">Camping</h5>
                     <ul class="raleway"> 
@@ -93,9 +93,9 @@
                 <div class="card m-2 p-3 my-5 rounded">
                     <h5 class="stat mx-auto">Activities</h5>
                     <ul class="raleway mx-auto">
-                        <li>activity one</li>
-                        <li>activity two</li>
-                        <li>activity three</li>
+                        <li class="activitiesItem">activity one</li>
+                        <li class="activitiesItem">activity two</li>
+                        <li class="activitiesItem">activity three</li>
                     </ul>
                 </div>
             </div>
@@ -121,7 +121,7 @@
             <div class="col-md-6 mx-auto">
                 <div class="card m-2 p-3 my-5 rounded">
                     <h5 class="stat mx-auto">Amenities</h5>
-                    <p class="raleway mx-auto">amenities data will be dumped here</p>
+                    <p class="raleway mx-auto" id="amenitiesInfo">amenities data will be dumped here</p>
                 </div>
             </div>
         </div>
@@ -146,7 +146,7 @@
             <div class="col-md-6 mx-auto">
                 <div class="card m-2 p-3 my-5 rounded">
                     <h5 class="stat mx-auto">Park Regulations</h5>
-                    <p class="raleway mx-auto">regulations data will be dumped here</p>
+                    <p class="raleway mx-auto" id="regulationsInfo">regulations data will be dumped here</p>
                 </div>
             </div>
         </div>
