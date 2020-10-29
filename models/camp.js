@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes){
         fireStovePolicy: {type: DataTypes.TEXT, allowNull: true},
         rvAllowed: {type: DataTypes.INTEGER, allowNull: true},
         rvInfo: {type: DataTypes.TEXT, allowNull: true},
-        rvMaxLength: {type: {type: DataTypes.INTEGER, allowNull: true}, allowNull: true},
+        rvMaxLength: {type: DataTypes.INTEGER, allowNull: true},
         additionalInfo: {type: DataTypes.TEXT, allowNull: true},
         trailerMaxLength: {type: DataTypes.INTEGER, allowNull: true},
         adaInfo: {type: DataTypes.TEXT, allowNull: true},
