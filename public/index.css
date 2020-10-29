@@ -19,6 +19,7 @@ section{
 .nav-wrapper{
     width: 100%;
     display: flex;
+    background-color: rgba(133, 141, 130, 0.735);
     justify-content: space-between;
     position: absolute;
     top: 0;
@@ -29,19 +30,20 @@ section{
 
 .nav-wrapper h4{
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Staatliches";
+    font-size: 1.3em;
     margin-left: 30px;
 }
 
 .nav-wrapper .button {
     text-decoration: none;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Staatliches";
     padding: 10px 20px;
-    background-color: black;
+    background-color: rgb(163, 199, 211);
     margin-right: 30px;
-    border-radius: 20px;
-    font-size: 0.8em;
+    border-radius: 4px;
+    font-size: 1.3em;
 }
 
 
@@ -51,14 +53,16 @@ section{
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 100px;
+    color:white;
+    font-family: "Staatliches";
+    letter-spacing: 9px;
+    font-size: 180px;
     z-index: -2;
 }
 
 
 .images{
+    /* background-image: linear-gradient(rgba(18, 18, 19, 0.50), rgba(18, 18, 19, 0.25)); */
     width: 100%;
     height: 110%;
     position: relative;
@@ -85,7 +89,7 @@ section{
 .blur{
     width: 100%;
     height: 250px;
-    background-color: black;
+    background-color:  rgba(133, 141, 130, 0.735);
     position: absolute;
     bottom: -170px;
     filter: blur(40px);
@@ -95,7 +99,7 @@ section{
 .content{
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color:  rgba(133, 141, 130, 0.735);
     z-index: 0;
     top: 100%;
     position: absolute;
