@@ -35,8 +35,8 @@
         <!--general info card-->
         <div class="col-md-3">
             <div class="card m-2 p-3 my-5 rounded">
-                <h5 class="stat">General Info</h5>
-                <ul class="raleway">
+                <h5 class="stat mx-auto">General Info</h5>
+                <ul class="raleway mx-auto">
                     <li>operating hours</li>
                     <li>contacts</li>
                     <li>address</li>
@@ -83,16 +83,25 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Activities</h5>
+          <h5 class="modal-title stat" id="exampleModalLabel"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-            <p>some activities will populate here</p>
+        <div class="modal-body raleway">
+            <div class="col-md-6 mx-auto">
+                <div class="card m-2 p-3 my-5 rounded">
+                    <h5 class="stat mx-auto">Activities</h5>
+                    <ul class="raleway mx-auto">
+                        <li>activity one</li>
+                        <li>activity two</li>
+                        <li>activity three</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -103,16 +112,21 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Amenities</h5>
+          <h5 class="modal-title stat" id="exampleModalLabel"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-            <p>amenities will populate here</p>
+        <div class="modal-body raleway">
+            <div class="col-md-6 mx-auto">
+                <div class="card m-2 p-3 my-5 rounded">
+                    <h5 class="stat mx-auto">Amenities</h5>
+                    <p class="raleway mx-auto">amenities data will be dumped here</p>
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -123,16 +137,21 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Regulations</h5>
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <p>park regulations will populate here</p>
+            <div class="col-md-6 mx-auto">
+                <div class="card m-2 p-3 my-5 rounded">
+                    <h5 class="stat mx-auto">Park Regulations</h5>
+                    <p class="raleway mx-auto">regulations data will be dumped here</p>
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -142,7 +161,7 @@
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Camp Reservation</h5>
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -252,14 +271,12 @@
                 </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary stat rounded">Reserve it!</button>
             </div>
           </div>
         </div>
       </div>
-
-      <!---->
     
 </body>
 </html>

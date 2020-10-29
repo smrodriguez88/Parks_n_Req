@@ -61,3 +61,10 @@ a:hover {
     overflow: auto;
     overflow-y: auto;
  } */
+
+ .modal-body {
+     background-color: #51594C;
+     color: white;
+ }
+
+
