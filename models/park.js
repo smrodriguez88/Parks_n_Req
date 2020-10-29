@@ -19,13 +19,13 @@ module.exports = function(sequelize, DataTypes){
         email: {type: DataTypes.STRING, allowNull: true},
         //ENTRANCE FEES
         cost: {type: DataTypes.DECIMAL, allowNull: true},
-        description: {type: DataTypes.TEXT, allowNull: true},
+        feeDescription: {type: DataTypes.TEXT, allowNull: true},
         //ENTRANCE PASSES
         passCost: {type: DataTypes.DECIMAL, allowNull: true},
         passDescription: {type: DataTypes.TEXT, allowNull: true},
         //OPERATING HOURS
         exceptions: {type: DataTypes.JSON, allowNull: true},
-        description: {type: DataTypes.TEXT, allowNull: true},
+        hoursDescription: {type: DataTypes.TEXT, allowNull: true},
         standardHours: {type: DataTypes.JSON, allowNull: true}
     });
 
