@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="parks.css">
-    <title>Park Name</title>
+    <script src="parks.js"></script>
+    <title></title>
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid stat" style='background-image: linear-gradient(rgba(18, 18, 19, 0.50), rgba(18, 18, 19, 0.25)), url("https://tpwd.texas.gov/state-parks/palo-duro-canyon/gallery/lighthouse-peak.jpg")'>
         <div class="container">
-          <h1 class="display-2">Palo Duro Canyon</h1>
+          <h1 class="display-2" id="parkName">Palo Duro Canyon</h1>
         </div>
     </div>
 
@@ -31,52 +35,248 @@
         <!--general info card-->
         <div class="col-md-3">
             <div class="card m-2 p-3 my-5 rounded">
-                <h5 class="stat">General Info</h5>
-                <ul class="raleway">
-                    <li>operating hours</li>
-                    <li>contacts</li>
-                    <li>address</li>
+                <h5 class="stat mx-auto">General Info</h5>
+                <ul class="raleway mx-auto">
+                    <li id="opHours">operating hours</li>
+                    <li id="contact">contacts</li>
+                    <li id="address">address</li>
                 </ul>
             </div>
         </div>
         <!--description card-->
         <div class="col-md-6">
             <div class="card text-center m-2 my-5 p-3 rounded">
-                <h3 class="card-title stat">About Palo Duro Canyon</h3>
-                <p class="raleway"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <h3 class="card-title stat" id="aboutPark">About the park</h3>
+                <p class="raleway" id="parkInfo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Libero qui voluptate ea animi recusandae velit debitis, explicabo repudiandae 
                     totam atque quibusdam facilis aspernatur nam. Ullam ab pariatur neque expedita qui.
                     <br>
                     <br>
-                    <button type="button" class="btn stat rounded" href="#modal1">Activities</button>
+                    <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal1" id="activitiesBtn">Activities</button>
                 </p>
+                <h3 class="card-title stat" id="aboutCamp">About the Campsite</h3>
+                <p class="raleway" id="campInfo">
+                    <br>
+                    <br>
+                    <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal2" id="amenitiesBtn">Amenities</button>
+                    <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal3" id="regulationsBtn">Regulations</button>
             </div>
         </div>
             <!--Pricing card-->
             <div class="col-md-3">
                 <div class="card text-center m-2 my-5 p-3 rounded">
-                    <h5 class="card-title stat">Pricing & Passes</h5>
+                    <h5 class="card-title stat">Park Passes</h5>
                     <ul class="raleway">
-                        <li>Price: $5.00</li>
-                        <li>Pass: Free</li>
+                        <li id="dayPass"></li>
+                        <li id="passPrice"></li>
+                    </ul>
+                    <h5 class="card-title stat">Camping</h5>
+                    <ul class="raleway"> 
+                        <li><button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal4" id="resBtn">Reserve your spot!</button></li>
                     </ul>
                 </div>
             </div>
         </div>
-<!--activities modal-->
-    <!-- <div id="modal1" class="modal bottom-sheet">
-        <div class="modal-content">
-          <h4>Modal Header</h4>
-          <p>A bunch of text</p>
+        
+<!--parks activities modal-->
+<div class="modal fade bd-example-modal-lg" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title stat" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body raleway">
+            <div class="col-md-6 mx-auto">
+                <div class="card m-2 p-3 my-5 rounded">
+                    <h5 class="stat mx-auto">Activities</h5>
+                    <ul class="raleway mx-auto">
+                        <li class="activitiesItem">activity one</li>
+                        <li class="activitiesItem">activity two</li>
+                        <li class="activitiesItem">activity three</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat"></a>
+          <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
         </div>
-      </div> -->
-              
+      </div>
+    </div>
+  </div>    
 
-
-
+<!--amenities modal-->
+<div class="modal fade bd-example-modal-lg" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title stat" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body raleway">
+            <div class="col-md-6 mx-auto">
+                <div class="card m-2 p-3 my-5 rounded">
+                    <h5 class="stat mx-auto">Amenities</h5>
+                    <p class="raleway mx-auto" id="amenitiesInfo">amenities data will be dumped here</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+<!--regulations modal-->
+<div class="modal fade bd-example-modal-lg" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="col-md-6 mx-auto">
+                <div class="card m-2 p-3 my-5 rounded">
+                    <h5 class="stat mx-auto">Park Regulations</h5>
+                    <p class="raleway mx-auto" id="regulationsInfo">regulations data will be dumped here</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+<!--reservation modal-->
+      <div class="modal fade bd-example-modal-lg" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <!--reservation form-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card m-2 p-3 my-5 rounded">
+                            <h2 class="stat mx-auto">Camping Reservation</h4>
+                            <div class="form-row mx-5">
+                                <div class="form-group col-md-4">
+                                    <label for="inputFirstName">First Name</label>
+                                    <input type="firstName" class="form-control raleway" id="inputFirstName" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputLastName">Last Name</label>
+                                    <input type="lastName" class="form-control raleway" id="inputLastName" placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputPhone">Phone Number</label>
+                                    <input type="phoneNumber" class="form-control raleway" id="inputPhone" placeholder="Phone Number"></input>
+                                </div>
+                            </div>
+                            <div class="form-row mx-5">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail">Email</label>
+                                    <input type="email" class="form-control raleway" id="inputEmail" placeholder="Email"></input>
+                                </div>
+                            </div>
+                            <div class="form-group mx-5">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control raleway" id="inputAddress" placeholder="1234 Main St">
+                              </div>
+                              <div class="form-group mx-5">
+                                <label for="inputAddress2">Address 2</label>
+                                <input type="text" class="form-control raleway" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                              </div>
+                              <div class="form-row mx-5">
+                                <div class="form-group col-md-6">
+                                  <label for="inputCity">City</label>
+                                  <input type="text" class="form-control raleway" id="inputCity">
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <label for="inputState">State</label>
+                                  <select id="inputState" class="form-control raleway">
+                                    <option selected>State</option>
+                                    <option>Alabama</option>
+                                    <option>Alaska</option>
+                                    <option>Arizona</option>
+                                    <option>Arkansas</option>
+                                    <option>California</option>
+                                    <option>Colorado</option>
+                                    <option>Connecticut</option>
+                                    <option>Delaware</option>
+                                    <option>Florida</option>
+                                    <option>Georgia</option>
+                                    <option>Hawaii</option>
+                                    <option>Idaho</option>
+                                    <option>Illinois</option>
+                                    <option>Indiana</option>
+                                    <option>Iowa</option>
+                                    <option>Kansas</option>
+                                    <option>Kentucky</option>
+                                    <option>Louisiana</option>
+                                    <option>Maine</option>
+                                    <option>Maryland</option>
+                                    <option>Massachusetts</option>
+                                    <option>Michigan</option>
+                                    <option>Minnesota</option>
+                                    <option>Mississippi</option>
+                                    <option>Missouri</option>
+                                    <option>Montana</option>
+                                    <option>Nebraska</option>
+                                    <option>Nevada</option>
+                                    <option>New Hampshire</option>
+                                    <option>New Jersey</option>
+                                    <option>New Mexico</option>
+                                    <option>New York</option>
+                                    <option>North Carolina</option>
+                                    <option>North Dakota</option>
+                                    <option>Ohio</option>
+                                    <option>Oklahoma</option>
+                                    <option>Oregon</option>
+                                    <option>Pennsylvania</option>
+                                    <option>Rhode Island</option>
+                                    <option>South Carolina</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Utah</option>
+                                    <option>Vermont</option>
+                                    <option>Vermont</option>
+                                    <option>Virginia</option>
+                                    <option>Washington</option>
+                                    <option>West Virginia</option>
+                                    <option>Wisconsin</option>
+                                    <option>Wyoming</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                  <label for="inputZip">Zip</label>
+                                  <input type="text" class="form-control raleway" id="inputZip">
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary stat rounded">Reserve it!</button>
+            </div>
+          </div>
+        </div>
+      </div>
     
 </body>
 </html>
