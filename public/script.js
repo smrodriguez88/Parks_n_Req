@@ -75,3 +75,4 @@ gsap.to(".blur", {
     top: "0%",
     duration: 6
 }); 
+
