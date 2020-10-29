@@ -29,14 +29,14 @@ section{
 
 .nav-wrapper h4{
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Raleway";
     margin-left: 30px;
 }
 
 .nav-wrapper .button {
     text-decoration: none;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Raleway";
     padding: 10px 20px;
     background-color: black;
     margin-right: 30px;
@@ -51,9 +51,10 @@ section{
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 100px;
+    color:white;
+    font-family: "Staatliches";
+    letter-spacing: 9px;
+    font-size: 180px;
     z-index: -2;
 }
 
@@ -85,7 +86,7 @@ section{
 .blur{
     width: 100%;
     height: 250px;
-    background-color: rgb(255, 245, 215);
+    background-color:  #51594C;
     position: absolute;
     bottom: -170px;
     filter: blur(40px);
@@ -95,7 +96,7 @@ section{
 .content{
     height: 100%;
     width: 100%;
-    background-color: rgb(255, 245, 215);
+    background-color:  #51594C;
     z-index: 0;
     top: 100%;
     position: absolute;
