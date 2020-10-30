@@ -1,20 +1,35 @@
 module.exports = function(sequelize, DataTypes) { 
   let Reservation = sequelize.define("Reservation", {
-    uuid: DataTypes.UUID,
-    date: DataTypes.DATE,
-    parkID: DataTypes.STRING
+    startDate: DataTypes.STRING,
+    endDate: DataTypes.STRING,
+    parkCode: DataTypes.INTEGER,
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    phone: DataTypes.STRING,
+    email: DataTypes.STRING,
+    vehicleMake: DataTypes.STRING,
+    vehicleModel: DataTypes.STRING,
+    vehicleYear: DataTypes.INTEGER,
+    totalOccupants: DataTypes.INTEGER,
+    pet: DataTypes.BOOLEAN
   });
 
   Reservation.associate = function(models) {
     Reservation.belongsTo(models.camp, {
       foreignKey: {
         allowNull: false
-      }
-    });
-
-    Reservation.hasMany(models.userInfo, {
-      foreignKey: {
-        onDelete: "cascade"
       }
     });
   };
