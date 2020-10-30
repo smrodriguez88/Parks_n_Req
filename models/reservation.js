@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) { 
-  let Reservation = sequelize.define("reservation", {
+  let Reservation = sequelize.define("Reservation", {
     uuid: DataTypes.UUID,
     date: DataTypes.DATE,
     parkID: DataTypes.STRING
