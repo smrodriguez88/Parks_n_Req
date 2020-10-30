@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -172,6 +175,12 @@
                     <div class="col-md-12">
                         <div class="card m-2 p-3 my-5 rounded">
                             <h1 class="stat mx-auto mb-5">Camping Reservation</h1>
+                            <div class="row mx-auto mb-5">
+                                <label for="from" class="rounded">From</label>
+                                <input type="text" id="from" name="from">
+                                <label for="to" class="rounded">to</label>
+                                <input type="text" id="to" name="to">
+                            </div>
                                 <div class="row mx-5">
                                     <h4 class="mx-auto stat mb-4">Primary Occupant</h4>
                                     <div class="form-row mx-5">
@@ -186,6 +195,14 @@
                                         <div class="form-group col-md-4">
                                             <label for="inputPhone">Phone Number</label>
                                             <input type="phoneNumber" class="form-control raleway" id="inputPhone" placeholder="Phone Number"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mx-5">
+                                    <div class="form-row mx-auto text-center">
+                                        <div class="form-group col-md-12">
+                                            <label for="inputEmail">Email</label>
+                                            <input type="inputEmail" class="form-control raleway" id="inputEmail" placeholder="Email">
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +259,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-secondary stat rounded">Reserve it!</button>
+              <button type="button" class="btn btn-secondary stat rounded" id="makeRes">Reserve it!</button>
             </div>
           </div>
         </div>
