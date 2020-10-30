@@ -4,6 +4,7 @@ body {
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     transition: opacity 2s;
+    overflow-x: hidden;
 }
 
 section{
@@ -57,9 +58,23 @@ section{
     font-family: "Staatliches";
     letter-spacing: 9px;
     font-size: 180px;
-    z-index: -2;
+    z-index: -1;
 }
 
+
+
+
+.title2{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-family: "Staatliches";
+    letter-spacing: 9px;
+    font-size: 80px;
+    z-index: -1;
+}
 
 .images{
     /* background-image: linear-gradient(rgba(18, 18, 19, 0.50), rgba(18, 18, 19, 0.25)); */
@@ -99,7 +114,7 @@ section{
 .content{
     height: 100%;
     width: 100%;
-    background-color:  rgba(133, 141, 130, 0.735);
+    background-color:  rgb(133, 141, 130);
     z-index: 0;
     top: 100%;
     position: absolute;
@@ -109,6 +124,6 @@ section{
 }
 
 .texas-topo{
-    width: 40%;
+    width: 30%;
 }
  
