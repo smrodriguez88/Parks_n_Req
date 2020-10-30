@@ -1,5 +1,21 @@
 gsap.registerPlugin(ScrollTrigger);
 
+
+gsap.utils.toArray(".image-wrapper").forEach((panel, i) => {
+    ScrollTrigger.create({
+      trigger: panel,
+      start: "top", 
+      pin: true, 
+      pinSpacing: false 
+    });
+  });
+  
+  
+//   ScrollTrigger.create({
+//     snap: 1 / 4 // snap whole page to the closest section!
+//   });
+
+
 gsap.to("#seventh", {
     scrollTrigger: {
         trigger: "top", 
@@ -25,6 +41,7 @@ gsap.to("#fifth", {
     scrollTrigger: {
         trigger: "top", 
         scrub: 0.2,
+        pin:true,
        
          
     },
@@ -36,6 +53,7 @@ gsap.to("#fourth", {
     scrollTrigger: {
         trigger: "top", 
         scrub: 0.2,  
+        pin:true,
     },
     y: 400, 
     duration: 6, 
@@ -46,11 +64,12 @@ gsap.to("#third", {
         trigger: "top",
         // start: top,
         // end: bottom,
-        scrub: 0.5,  
+        scrub: 0.5, 
+        pin:true, 
         
     },
     y: 600, 
-    opacity: 0,  
+     
     duration: 6, 
 });
 
@@ -58,9 +77,10 @@ gsap.to("#second", {
     scrollTrigger: {
         trigger: "top", 
         scrub: 0.5,  
+        pin:true,
         
     },
-    y: 600,  
+    y: -100,  
     opacity: 0, 
     duration: 6, 
 });
@@ -68,7 +88,8 @@ gsap.to("#second", {
 gsap.to("#first", {
     scrollTrigger: {
         trigger: "top", 
-        scrub: 0.5,  
+        scrub: 0.5, 
+        pin:true,
         
     },
     y: 600,  
@@ -76,31 +97,46 @@ gsap.to("#first", {
     duration: 6, 
 });
 
-gsap.to(".title", {
-    scrollTrigger: { 
-        trigger: "top", 
-        scrub: 0.5,  
-    },
-    y: -100,  
-    opacity: 0,
-    duration: 1, 
-});
+// gsap.to(".title", {
+//     scrollTrigger: { 
+//         trigger: "top top", 
+//         scrub: true,  
+//     },
+   
+//     y: 600,
+//     opacity: 0, 
+// });
+
 
 gsap.to(".content", {
     scrollTrigger: {
-        trigger: "top", 
-        scrub: true,  
-    },
-    top: "0%",  
-    duration: 6, 
-}); 
+      trigger: ".content",
+      toggleActions: "restart pause reverse pause"
+    }, 
+    duration: 3, 
+    backgroundColor: "#858D82", 
+    ease: "none"
+  });
 
-
-gsap.to(".blur", {
+  gsap.to("#texnav", {
     scrollTrigger: {
-        trigger: "top",
-        scrub: true,  
-    },
-    top: "0%",
-    duration: 6
-}); 
+      trigger: "top",
+      scrub: true,
+    //   toggleActions: "restart pause reverse pause"
+    }, 
+    duration: 3, 
+    opacity: 0, 
+    ease: "none"
+
+  });
+
+// gsap.to(".content", {
+//     scrollTrigger: {
+//         trigger: "top", 
+//         scrub: true,  
+//     },
+//     top: "0%",  
+//     duration: 6, 
+// }); 
+
+
