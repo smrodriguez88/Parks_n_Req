@@ -2,90 +2,75 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     transition: opacity 2s;
     overflow-x: hidden;
-}
 
-section{
-    height: 100vh;
-    width: 100vw;
 }
-
-.container{
-    width: 100vw;
-    height: 100vh;
-}
-
-.nav-wrapper{
+.navbar{
     width: 100%;
     display: flex;
     background-color: rgba(133, 141, 130, 0.735);
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     top: 0;
+    z-index: 1;
     align-items: center;
     padding: 20px 0;
-
 }
 
-.nav-wrapper h4{
+.navbar h4{
     color: white;
     font-family: "Staatliches";
     font-size: 1.3em;
     margin-left: 30px;
 }
 
-.nav-wrapper .button {
-    text-decoration: none;
+.btn {
+    background-color: #9CBCD9;
+    color: #51594C;
+    border: solid 2px #9CBCD9;
+}
+a {
     color: white;
-    font-family: "Staatliches";
-    padding: 10px 20px;
-    background-color: rgb(163, 199, 211);
-    margin-right: 30px;
-    border-radius: 4px;
-    font-size: 1.3em;
+}
+a:hover {
+    color: #51594C;
 }
 
-
-
 .title{
-    position: absolute;
+    position: fixed;
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     color:white;
     font-family: "Staatliches";
     letter-spacing: 9px;
-    font-size: 180px;
-    z-index: -1;
+    font-size: 120px;
+    z-index: 0;
 }
-
-
 
 
 .title2{
     position: absolute;
-    bottom: 5%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     color:white;
     font-family: "Staatliches";
     letter-spacing: 9px;
-    font-size: 80px;
-    z-index: -1;
+    font-size: 40px;
+    z-index: 0;
 }
+
 
 .images{
     /* background-image: linear-gradient(rgba(18, 18, 19, 0.50), rgba(18, 18, 19, 0.25)); */
-    width: 100%;
-    height: 110%;
+    width: 100vh;
+    height: 100vw;
     position: relative;
-    z-index: -3;
+    z-index: -2;
     top: -10%;
 }
-
-
 
 
 .image-wrapper{
@@ -101,20 +86,11 @@ section{
     height: 100%;
 }
 
-.blur{
-    width: 100%;
-    height: 250px;
-    background-color:  rgba(133, 141, 130, 0.735);
-    position: absolute;
-    bottom: -170px;
-    filter: blur(40px);
-    z-index: 999;
-}
 
 .content{
-    height: 100%;
-    width: 100%;
-    background-color:  rgb(133, 141, 130);
+    height: 100vh;
+    width: 100vw;
+    background-color:  white;
     z-index: 0;
     top: 100%;
     position: absolute;
@@ -126,4 +102,22 @@ section{
 .texas-topo{
     width: 30%;
 }
- 
+/* 
+.container{
+    width: 100vw;
+    height: 100vh;
+} */
+
+
+#first-section{
+    height: 100vh;
+    width: 100vw;
+}
+
+.stat {
+    font-family: "Staatliches";
+}
+
+.raleway {
+    font-family: "Raleway";
+}
