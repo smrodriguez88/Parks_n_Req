@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -27,7 +30,7 @@
             <img src="./img/texas.png" height="50px">
         </div>
         <div class="navbar-right">
-            <a class="nav-link raleway" href="#"><i class="fas fa-home"></i></a>
+            <a class="nav-link raleway" href="/index.html"><i class="fas fa-home"></i></a>
         </div>
     </nav>
     
@@ -52,7 +55,8 @@
                     totam atque quibusdam facilis aspernatur nam. Ullam ab pariatur neque expedita qui.
                     <br>
                     <br>
-                    <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal1" id="activitiesBtn">Activities</button>
+                    <!--commented out for mvp requirements-->
+                    <!-- <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal1" id="activitiesBtn">Activities</button> -->
                 </p>
                 <h3 class="card-title stat" id="aboutCamp">About the Campsite</h3>
                 <p class="raleway" id="campInfo">
@@ -88,7 +92,11 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body raleway">
+
+        <!--if we have time after mvp-->
+
+
+        <!-- <div class="modal-body raleway">
             <div class="col-md-6 mx-auto">
                 <div class="card m-2 p-3 my-5 rounded">
                     <h5 class="stat mx-auto">Activities</h5>
@@ -99,7 +107,9 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
         </div>
@@ -171,112 +181,175 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card m-2 p-3 my-5 rounded">
-                            <h2 class="stat mx-auto">Camping Reservation</h4>
-                            <div class="form-row mx-5">
-                                <div class="form-group col-md-4">
-                                    <label for="inputFirstName">First Name</label>
-                                    <input type="firstName" class="form-control raleway" id="inputFirstName" placeholder="First Name">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="inputLastName">Last Name</label>
-                                    <input type="lastName" class="form-control raleway" id="inputLastName" placeholder="Last Name">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="inputPhone">Phone Number</label>
-                                    <input type="phoneNumber" class="form-control raleway" id="inputPhone" placeholder="Phone Number"></input>
-                                </div>
+                            <h1 class="stat mx-auto mb-5">Camping Reservation</h1>
+                            <div class="row mx-auto mb-5">
+                                <label for="from" class="rounded">From</label>
+                                <input type="text" id="from" name="from">
+                                <label for="to" class="rounded">to</label>
+                                <input type="text" id="to" name="to">
                             </div>
-                            <div class="form-row mx-5">
-                                <div class="form-group col-md-6">
-                                    <label for="inputEmail">Email</label>
-                                    <input type="email" class="form-control raleway" id="inputEmail" placeholder="Email"></input>
+                                <div class="row mx-5">
+                                    <h4 class="mx-auto stat mb-4">Primary Occupant</h4>
+                                    <div class="form-row mx-5">
+                                        <div class="form-group col-md-4">
+                                            <label for="inputFirstName">First Name</label>
+                                            <input type="firstName" class="form-control raleway" id="inputFirstName" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputLastName">Last Name</label>
+                                            <input type="lastName" class="form-control raleway" id="inputLastName" placeholder="Last Name">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputPhone">Phone Number</label>
+                                            <input type="phoneNumber" class="form-control raleway" id="inputPhone" placeholder="Phone Number"></input>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group mx-5">
-                                <label for="inputAddress">Address</label>
-                                <input type="text" class="form-control raleway" id="inputAddress" placeholder="1234 Main St">
-                              </div>
-                              <div class="form-group mx-5">
-                                <label for="inputAddress2">Address 2</label>
-                                <input type="text" class="form-control raleway" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                              </div>
-                              <div class="form-row mx-5">
-                                <div class="form-group col-md-6">
-                                  <label for="inputCity">City</label>
-                                  <input type="text" class="form-control raleway" id="inputCity">
+                                <div class="row mx-5">
+                                    <div class="form-row mx-auto text-center">
+                                        <div class="form-group col-md-12">
+                                            <label for="inputEmail">Email</label>
+                                            <input type="inputEmail" class="form-control raleway" id="inputEmail" placeholder="Email">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-4">
-                                  <label for="inputState">State</label>
-                                  <select id="inputState" class="form-control raleway">
-                                    <option selected>State</option>
-                                    <option>Alabama</option>
-                                    <option>Alaska</option>
-                                    <option>Arizona</option>
-                                    <option>Arkansas</option>
-                                    <option>California</option>
-                                    <option>Colorado</option>
-                                    <option>Connecticut</option>
-                                    <option>Delaware</option>
-                                    <option>Florida</option>
-                                    <option>Georgia</option>
-                                    <option>Hawaii</option>
-                                    <option>Idaho</option>
-                                    <option>Illinois</option>
-                                    <option>Indiana</option>
-                                    <option>Iowa</option>
-                                    <option>Kansas</option>
-                                    <option>Kentucky</option>
-                                    <option>Louisiana</option>
-                                    <option>Maine</option>
-                                    <option>Maryland</option>
-                                    <option>Massachusetts</option>
-                                    <option>Michigan</option>
-                                    <option>Minnesota</option>
-                                    <option>Mississippi</option>
-                                    <option>Missouri</option>
-                                    <option>Montana</option>
-                                    <option>Nebraska</option>
-                                    <option>Nevada</option>
-                                    <option>New Hampshire</option>
-                                    <option>New Jersey</option>
-                                    <option>New Mexico</option>
-                                    <option>New York</option>
-                                    <option>North Carolina</option>
-                                    <option>North Dakota</option>
-                                    <option>Ohio</option>
-                                    <option>Oklahoma</option>
-                                    <option>Oregon</option>
-                                    <option>Pennsylvania</option>
-                                    <option>Rhode Island</option>
-                                    <option>South Carolina</option>
-                                    <option>Tennessee</option>
-                                    <option>Texas</option>
-                                    <option>Utah</option>
-                                    <option>Vermont</option>
-                                    <option>Vermont</option>
-                                    <option>Virginia</option>
-                                    <option>Washington</option>
-                                    <option>West Virginia</option>
-                                    <option>Wisconsin</option>
-                                    <option>Wyoming</option>
-                                  </select>
+                                <div class="row mx-5">
+                                    <h4 class="mx-auto stat my-4">Vehicle Info</h4>
+                                    <div class="form-row mx-5">
+                                        <div class="form-group col-md-4">
+                                            <label for="inputVehicleMake">Vehicle Make</label>
+                                            <input type="inputVehicleMake" class="form-control raleway" id="inputVehicleMake" placeholder="Vehicle Make"></input>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputVehicleMod">Vehicle Model</label>
+                                            <input type="inputVehicleMod" class="form-control raleway" id="inputVehicleMod" placeholder="Vehicle Model"></input>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputVehicleYear">Vehicle Year</label>
+                                            <input type="inputVehicleYear" class="form-control raleway" id="inputVehicleYear" placeholder="Vehicle Year"></input>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-2">
-                                  <label for="inputZip">Zip</label>
-                                  <input type="text" class="form-control raleway" id="inputZip">
+                                <div class="row mx-5">
+                                    <h4 class="mx-auto stat my-4">Additional Info</h4>
+                                    <div class="container">
+                                        <div class="form-row mx-5">
+                                            <div class="form-group col-md-6 raleway">
+                                                <label for="inputOcc">Total Occupants</label>
+                                                <select id="inputOcc" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-6 raleway">
+                                                <label for="inputPet">Bringing a Pet?</label>
+                                                <select id="inputPet" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                 </div>
-                              </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-secondary stat rounded">Reserve it!</button>
+              <button type="button" class="btn btn-secondary stat rounded" id="makeRes">Reserve it!</button>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mb-5 text-center">
+  
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/nationalparkservice" target="_blank" class="fb-ic">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a href="https://www.twitter.com/natlparkservice" target="_blank" class="tw-ic">
+              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a href="https://www.instagram.com/nationalparkservice" target="_blank" class="ins-ic">
+              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Pinterest-->
+            <a href="https://www.youtube.com/nationalparkservice" target="_blank" class="pin-ic">
+              <i class="fab fa-youtube fa-lg white-text fa-2x"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> Parks n Req</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
     
 </body>
 </html>
+
+
+
+<div class="container">
+  <div class="form-row mx-5">
+      <div class="form-group col-md-6 raleway">
+          <label for="inputArrival">Select arrival date</label>
+          <select id="inputArrival" class="form-control col-md-4">
+          <option selected>Choose...</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          </select>
+      </div>
+      <div class="form-group col-md-6 raleway">
+          <label for="inputPet">Bringing a Pet?</label>
+          <select id="inputPet" class="form-control">
+          <option selected>Choose...</option>
+          <option>Yes</option>
+          <option>No</option>
+          </select>
+      </div>
+  </div>
+</div>

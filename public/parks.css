@@ -67,4 +67,12 @@ a:hover {
      color: white;
  }
 
+.fab {
+    color:rgb(46, 46, 46);
+}
+
+
+.fab:hover{
+    color: white;
+}
 
