@@ -48,38 +48,32 @@ $(document).ready(function () {
         })
     }
 
-    $(function() {
-        var dateFormat = "mm/dd/yy",
-          from = $( "#from" )
-            .datepicker({
-              defaultDate: "+1w",
-              changeMonth: true,
-              numberOfMonths: 3
-            })
-            .on( "change", function() {
-              to.datepicker( "option", "minDate", getDate( this ) );
-            }),
-          to = $( "#to" ).datepicker({
-            defaultDate: "+1w",
-            changeMonth: true,
-            numberOfMonths: 3
-          })
-          .on( "change", function() {
-            from.datepicker( "option", "maxDate", getDate( this ) );
-          });
-     
-        function getDate( element ) {
-          var date;
-          try {
-            date = $.datepicker.parseDate( dateFormat, element.value );
-          } catch( error ) {
-            date = null;
-          }
-     
-          return date;
-        }
-      } );
-
+  $('area').click(function(){
+    console.log($(this).attr("data-parkcode"));
+    localStorage.setItem("parkCode", $(this).attr("data-parkcode"));
+  }) 
 
 });
 
+$(document).ready(function(){
+  parkCode = localStorage.getItem("parkCode")
+  console.log(`This is ${parkCode} from localStorage`)
+  test = $.ajax({
+    method: "GET",
+    "crossDomain": true,
+    url: `http://127.0.0.1:8080/api/park/${parkCode}`
+  }).then(function(result) {
+    console.log(result)
+    
+    $('#parkName').html()
+    // $('#opHours').
+    // $('#contact').
+    // $('#address').
+    // $('#parkInfo').
+    // $('#campInfo').
+    // $('#dayPass').
+    // $('#passPrice').
+    // $('#amenitiesInfo').
+    // $('#regulationsInfo').
+  });
+});
