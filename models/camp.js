@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes){
 
-    let Camp = sequelize.define("camp", {
+    let Camp = sequelize.define("Camp", {
         //GENERAL INFO
         id: {type: DataTypes.STRING, allowNull: false, primaryKey: true},
         url: {type: DataTypes.STRING, allowNull: true},
@@ -54,16 +54,16 @@ module.exports = function(sequelize, DataTypes){
         email: {type: DataTypes.STRING, allowNull: true},
         //FEES
         cost: {type: DataTypes.DECIMAL, allowNull: true},
-        description: {type: DataTypes.TEXT, allowNull: true},
+        feeDescription: {type: DataTypes.TEXT, allowNull: true},
         title: {type: DataTypes.STRING, allowNull: true},
         //OPERATING HOURS
         exceptions: {type: DataTypes.JSON, allowNull: true},
-        description: {type: DataTypes.TEXT, allowNull: true},
+        hoursDescription: {type: DataTypes.TEXT, allowNull: true},
         standardHours: {type: DataTypes.JSON, allowNull: true}
     });
 
     Camp.associate = function(models){
-        Camp.hasMany(models.reservation, {
+        Camp.hasMany(models.Reservation, {
             onDelete: "cascade"
         });
     };
