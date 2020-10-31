@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    let UserInfo = sequelize.define("userInfo", {
+    let UserInfo = sequelize.define("UserInfo", {
         uuid: DataTypes.UUID,
         firstName: {
             type: DataTypes.STRING,
@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
     })
 
     UserInfo.associate = function(models) {
-        UserInfo.belongsTo(models.reservation, {
+        UserInfo.belongsTo(models.Reservation, {
           foreignKey: {
             allowNull: false
           }
