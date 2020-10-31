@@ -123,7 +123,12 @@ a:hover {
     font-family: "Raleway";
 }
 
-.tooltip {
+.modal-body {
+    background-color: #51594C !important;
+    color: white;
+}
+
+/* .tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
@@ -139,10 +144,19 @@ a:hover {
     padding: 5px 0;
   
     /* Position the tooltip */
-    position: absolute;
+    /* position: absolute;
     z-index: 1;
   }
   
   .tooltip:hover .tooltiptext {
     visibility: visible;
-  }
+  } */
+
+/* #myTooltip {
+    display: inline-block;
+    padding: 15px;
+    background: rgba(0,0,0,.5);
+    color: white;
+    position: absolute;
+    display: none;
+} */

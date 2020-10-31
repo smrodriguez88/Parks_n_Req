@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Reservation.associate = function(models) {
-    Reservation.belongsTo(models.camp, {
+    Reservation.belongsTo(models.Camp, {
       foreignKey: {
         allowNull: false
       }
