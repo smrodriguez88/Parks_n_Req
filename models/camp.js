@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes){
 
-    let Camp = sequelize.define("camp", {
+    let Camp = sequelize.define("Camp", {
         //GENERAL INFO
         id: {type: DataTypes.STRING, allowNull: false, primaryKey: true},
         url: {type: DataTypes.STRING, allowNull: true},
