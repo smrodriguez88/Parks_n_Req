@@ -28,7 +28,7 @@
     <!-- <nav>
         <div class="navbar stat">
             <h4>NPS TEXAS</h4>
-            <a href="https://www.hikes.band" class="button" target="_blank">Contact</a>
+            <a href="https://www.hikes.band" class="button" Contact</a>
         </div>
 
     </nav> -->
@@ -46,7 +46,7 @@
     <div class="jumbotron jumbotron-fluid stat" id="first-section">
 
 
-         <!-- <div class="image-wrapper" id="first">
+        <!-- <div class="image-wrapper" id="first">
             <img src="./img/1-Background.png" alt="background">
         </div> -->
         <div class="image-wrapper" id="second">
@@ -78,41 +78,89 @@
     <div class="jumbotron jumbotron-fluid stat">
 
         <div class="content">
-        
+
             <img src="./img/texas-topo-mapped.png" class="texas-topo" usemap="#image-map">
-    
+
             <map name="image-map">
-                <area target="_blank" alt="Alibates" title="Alibates" href="https://www.nps.gov/index.htm" data-parkcode="alfl" id="alfl" coords="368,199,336,142" shape="rect" onmouseover="">
-                <area target="_blank" alt="Amistad" title="Amistad" href="https://www.nps.gov/index.htm" data-parkcode="amis" id="amis" coords="375,519,404,573" shape="rect">
-                <area target="_blank" alt="Big Bend" title="Big Bend" href="https://www.nps.gov/index.htm" data-parkcode="bibe" id="bibe" coords="242,535,272,592" shape="rect">
-                <area target="_blank" alt="Big Thicket" title="Big Thicket" href="https://www.nps.gov/index.htm" data-parkcode="bith" id="bith" coords="769,549,734,492" shape="rect">
-                <area target="_blank" alt="Chamizal" title="Chamizal" href="https://www.nps.gov/index.htm" data-parkcode="cham" id="cham" coords="94,381,129,437" shape="rect">
-                <area target="_blank" alt="Fort Davis" title="Fort Davis" href="https://www.nps.gov/index.htm" data-parkcode="foda" id="foda" coords="241,441,272,488" shape="rect">
-                <area target="_blank" alt="Guadelupe Mountains" title="Guadelupe Mountains" href="https://www.nps.gov/index.htm" data-parkcode="gumo" id="gumo" coords="226,364,256,410" shape="rect">
-                <area target="_blank" alt="Lake Meredith" title="Lake Meredith" href="https://www.nps.gov/index.htm" data-parkcode="lamr" id="lamr" coords="378,126,411,175" shape="rect">
-                <area target="_blank" alt="Lyndon B Johnson" title="Lyndon B Johnson" href="" coords="590,288,625,335" data-parkcode="lyjo" id="lyjo" shape="rect">
-                <area target="_blank" alt="Padre Island" title="Padre Island" href="https://www.nps.gov/index.htm" data-parkcode="pais" id="pais" coords="614,636,648,680" shape="rect">
-                <area target="_blank" alt="Palo Alto" title="Palo Alto " href="https://www.nps.gov/index.htm" data-parkcode="paal" id="paal" coords="591,753,622,800" shape="rect">
-                <area target="_blank" alt="Rio Grande" title="Rio Grande" href="https://www.nps.gov/index.htm" data-parkcode="rigr" id="rigr" coords="447,570,413,621" shape="rect">
-                <area target="_blank" alt="San Antonio Missions" title="San Antonio Missions" href="https://www.nps.gov/index.htm" data-parkcode="saan" id="saan" coords="535,534,568,584" shape="rect">
-                <area target="_blank" alt="Waco Mammoth" title="Waco Mammoth" href="https://www.nps.gov/index.htm" data-parkcode="waco" id="waco" coords="577,386,610,433" shape="rect">
-                <area target="_blank" alt="El Camino Real De los Tejas" title="El Camino Real De los Tejas" href="https://www.nps.gov/index.htm" data-parkcode="elca" id="elca" coords="579,489,610,539" shape="rect">
+                
+                <area alt="Alibates" title="Alibates" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="alfl" id="alfl"
+                    coords="368,199,336,142" shape="rect">
+
+                <area alt="Amistad" title="Amistad" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="amis" id="amis"
+                    coords="375,519,404,573" shape="rect">
+
+                <area alt="Big Bend" title="Big Bend" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="bibe" id="bibe"
+                    coords="242,535,272,592" shape="rect">
+
+                <area alt="Big Thicket" title="Big Thicket" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="bith"
+                    id="bith" coords="769,549,734,492" shape="rect">
+
+                <area alt="Chamizal" title="Chamizal" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="cham" id="cham"
+                    coords="94,381,129,437" shape="rect">
+
+                <area alt="Fort Davis" title="Fort Davis" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="foda" id="foda"
+                    coords="241,441,272,488" shape="rect">
+
+                <area alt="Guadelupe Mountains" title="Guadelupe Mountains" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1"
+                    data-parkcode="gumo" id="gumo" coords="226,364,256,410" shape="rect">
+
+                <area alt="Lake Meredith" title="Lake Meredith" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="lamr"
+                    id="lamr" coords="378,126,411,175" shape="rect">
+
+                <area alt="Lyndon B Johnson" title="Lyndon B Johnson" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1"
+                    coords="590,288,625,335" data-parkcode="lyjo" id="lyjo" shape="rect">
+
+                <area alt="Padre Island" title="Padre Island" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="pais"
+                    id="pais" coords="614,636,648,680" shape="rect">
+
+                <area alt="Palo Alto" title="Palo Alto " href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="paal" id="paal"
+                    coords="591,753,622,800" shape="rect">
+
+                <area alt="Rio Grande" title="Rio Grande" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="rigr" id="rigr"
+                    coords="447,570,413,621" shape="rect">
+
+
+                <area alt="San Antonio Missions" title="San Antonio Missions" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1"
+                    data-parkcode="saan" id="saan" coords="535,534,568,584" shape="rect">
+
+                <area alt="Waco Mammoth" title="Waco Mammoth" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="waco"
+                    id="waco" coords="577,386,610,433" shape="rect">
+                    
+                <area alt="El Camino Real De los Tejas" title="El Camino Real De los Tejas"
+                    href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="elca" id="elca" coords="579,489,610,539"
+                    shape="rect">
             </map>
-    
+
             <div class="title2">PICK A PARK FROM THE MAP</div>
         </div>
-    
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
-        
+<!-- modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          This park is radd!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Go To Park Page</button>
+        </div>
+      </div>
     </div>
+  </div>
 
 
 
-
+    </div>
 
 
     <!-- js links  -->
@@ -125,6 +173,16 @@
     <script type="text/javascript">
 
         $('map').imageMapResize();
+
+let mapfunction = function(event) {
+    event.preventDefault();
+    $("#exampleModalLabel").text = this.title;  
+    alert(this.title)
+    
+}
+   
+
+
 
     </script>
 

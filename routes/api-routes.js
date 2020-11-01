@@ -51,7 +51,7 @@ module.exports = function(app) {
     Reservation.create({
       startDate: req.body.startDate,
       endDate: req.body.endDate,
-      parkCode: req.body.parkCode, // needs to be different
+    //   parkCode: req.body.parkCode, 
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       phone: req.body.phone,
@@ -66,12 +66,4 @@ module.exports = function(app) {
     })
   });
 
-  // Add sequelize code to delete a book
-  app.delete("/api/book/:id", function(req, res) {
-    Book.destroy({
-      where: {
-        id: req.params.id
-      }
-    });
-  });  
 };

@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   let Reservation = sequelize.define("Reservation", {
     startDate: DataTypes.STRING,
     endDate: DataTypes.STRING,
-    parkCode: DataTypes.INTEGER,
+    // parkCode: DataTypes.INTEGER,
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
