@@ -34,12 +34,12 @@
     </nav> -->
 
     <nav class="navbar p-2">
-        <span class="navbar-item stat">NPS Texas</span>
+        <span class="navbar-item stat">NATIONAL PARKS SERVICE</span>
         <div class="navbar-item">
             <img id="texnav" src="./img/texas.png" height="50px">
         </div>
         <div class="navbar-right">
-            <a class="nav-link raleway" href="#"><i class="fas fa-home"></i></a>
+            <a class="nav-link raleway" href="https://www.nps.gov/index.htm"><i class="fas fa-home"></i></a>
         </div>
     </nav>
 
@@ -82,9 +82,10 @@
             <img src="./img/texas-topo-mapped.png" class="texas-topo" usemap="#image-map">
 
             <map name="image-map">
-                
-                <area alt="Alibates" title="Alibates" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="alfl" id="alfl"
-                    coords="368,199,336,142" shape="rect">
+
+             
+                <area alt="Alibates" title="Alibates" href="javascript:mapfunction()" data-tooltip="tooltip" data-toggle="modal" data-target="#modal1" data-parkcode="alfl" id="alfl"
+                    coords="368,199,336,142" shape="rect">  
 
                 <area alt="Amistad" title="Amistad" href="javascript:mapfunction()" data-toggle="modal" data-target="#modal1" data-parkcode="amis" id="amis"
                     coords="375,519,404,573" shape="rect">
@@ -172,7 +173,17 @@
     <script src="./parks.js"></script>
     <script type="text/javascript">
 
+//imagemap init
+
         $('map').imageMapResize();
+
+//tooltip init
+
+        $(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+//modal init
 
     $('area').click(function(event) {
         event.preventDefault();
@@ -182,7 +193,7 @@
     })
    
 
-
+ 
 
     </script>
 
