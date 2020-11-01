@@ -12,68 +12,115 @@
     <title></title>
 </head>
 <body>
+
+    <!--image jumbotron-->
+
     <div class="jumbotron jumbotron-fluid stat" style='background-image: linear-gradient(rgba(18, 18, 19, 0.50), rgba(18, 18, 19, 0.25)), url("https://tpwd.texas.gov/state-parks/palo-duro-canyon/gallery/lighthouse-peak.jpg")'>
         <div class="container">
+
+          <!--data from database will render in h1 tag-->
+
           <h1 class="display-2" id="parkName"></h1>
         </div>
     </div>
 
+    <!--navbar-->
+
     <nav class="navbar p-2">
         <span class="navbar-item stat">NPS Texas</span>
         <div class="navbar-item">
+
+            <!--icon-->
+
             <img src="./img/texas.png" height="50px">
         </div>
         <div class="navbar-right">
+
+            <!--link to the home page from the park page-->
+
             <a class="nav-link raleway" href="./home.html"><i class="fas fa-home"></i></a>
         </div>
     </nav>
     
     <div class="row">
+
         <!--general info card-->
+
         <div class="col-md-3">
             <div class="card m-2 p-3 my-5 rounded">
                 <h5 class="stat mx-auto">General Info</h5>
                 <ul class="raleway mx-auto">
-                    <li id="opHours">operating hours</li>
-                    <li id="contact">contacts</li>
-                    <li id="address">address</li>
+
+                    <!--data rendered from the database in list items-->
+
+                    <li id="opHours"></li>
+                    <li id="contact"></li>
+                    <li id="address"></li>
                 </ul>
             </div>
         </div>
+
         <!--description card-->
+
         <div class="col-md-6">
             <div class="card text-center m-2 my-5 p-3 rounded">
                 <h3 class="card-title stat" id="aboutPark">About the park</h3>
                 <p class="raleway" id="parkInfo"> 
+
+                    <!--data rendered from the database in p tag-->
+
                     <br>
                     <br>
+
                     <!--commented out for mvp requirements-->
                     <!-- <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal1" id="activitiesBtn">Activities</button> -->
+                
                 </p>
                 <h3 class="card-title stat" id="aboutCamp">About the Campsite</h3>
+
+                <!--data rendered from the database in p tag-->
+
                 <p class="raleway" id="campInfo">
                     <br>
                     <br>
+
+                    <!--button for amenities modal-->
+
                     <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal2" id="amenitiesBtn">Amenities</button>
+                    
+                    <!--button for regulations modal-->
+                    
                     <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal3" id="regulationsBtn">Regulations</button>
+
+                  </p>
             </div>
         </div>
-            <!--Pricing card-->
+
+            <!--Pricing/camping card-->
+
             <div class="col-md-3">
                 <div class="card text-center m-2 my-5 p-3 rounded">
                     <h5 class="card-title stat">Park Passes</h5>
                     <ul class="raleway">
+
+                        <!--data rendered from the database in list items-->
+
                         <li id="dayPass"></li>
                         <li id="passPrice"></li>
                     </ul>
                     <h5 class="card-title stat">Camping</h5>
                     <ul class="raleway"> 
+
+                        <!--button to open reservations modal-->
+
                         <li><button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal4" id="resBtn">Reserve your spot!</button></li>
                     </ul>
                 </div>
             </div>
         </div>
-        
+
+
+<!--NOT NEEDED FOR MVP-->        
 <!--parks activities modal-->
 <!-- <div class="modal fade bd-example-modal-lg" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -110,11 +157,15 @@
   </div>     -->
 
 <!--amenities modal-->
+
 <div class="modal fade bd-example-modal-lg" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title stat" id="exampleModalLabel"></h5>
+
+          <!--top right corner exit button-->
+
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -123,11 +174,17 @@
             <div class="col-md-6 mx-auto">
                 <div class="card m-2 p-3 my-5 rounded">
                     <h5 class="stat mx-auto">Amenities</h5>
+
+                    <!--p tag where database info is rendered-->
+                  
                     <p class="raleway mx-auto" id="amenitiesInfo"></p>
                 </div>
             </div>
         </div>
         <div class="modal-footer">
+
+          <!--button to close the modal-->
+
           <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -135,11 +192,15 @@
   </div> 
   
 <!--regulations modal-->
+
 <div class="modal fade bd-example-modal-lg" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel"></h5>
+
+          <!--top right corner exit button-->
+
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -148,35 +209,54 @@
             <div class="col-md-6 mx-auto">
                 <div class="card m-2 p-3 my-5 rounded">
                     <h5 class="stat mx-auto">Park Regulations</h5>
+
+                    <!--p tag where database info is rendered-->
+
                     <p class="raleway mx-auto" id="regulationsInfo"></p>
                 </div>
             </div>
         </div>
         <div class="modal-footer">
+
+          <!--button to close the modal-->
+
           <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div> 
+
 <!--reservation modal-->
+
       <div class="modal fade bd-example-modal-lg" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel"></h5>
+
+              <!--top right corner exit button-->
+
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
+
                 <!--reservation form-->
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card m-2 p-3 my-5 rounded">
-                            <h1 class="stat mx-auto mb-5">Camping Reservation</h1>
+                          <h1 class="stat mx-auto mb-5">Camping Reservation</h1>
+
+                            <!--beginning of reservation form-->
+
                             <div class="container">
                               <div class="form-row mx-5">
                                   <div class="form-group col-md-4 raleway mx-5">
+
+                                      <!--drop downs for arrival date(all dropdowns)-->
+
                                       <label for="inputArrival">Select arrival date</label>
                                       <select id="arrivalMonth" class="form-control">
                                         <option selected>Choose Month</option>
@@ -234,6 +314,9 @@
                                         <option>2022</option>
                                       </select>
                                   </div>
+
+                                  <!--drop downs for departure date-->
+
                                   <div class="form-group col-md-4 raleway mx-5">
                                   <label for="inputArrival">Select departure date</label>
                                   <select id="departureMonth" class="form-control">
@@ -293,6 +376,9 @@
                                   </select>
                               </div>
                             </div>
+
+                                <!--second section of the form(Primary occupant) all input fields-->
+
                                 <div class="row mx-5">
                                     <h4 class="mx-auto stat mb-4">Primary Occupant</h4>
                                     <div class="form-row mx-5">
@@ -318,6 +404,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!--third section of form(Vehicle Info)all input fields-->
+
                                 <div class="row mx-5">
                                     <h4 class="mx-auto stat my-4">Vehicle Info</h4>
                                     <div class="form-row mx-5">
@@ -335,6 +424,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!--fourth section of the modal(Additional Info) all drop downs-->
+
                                 <div class="row mx-5">
                                     <h4 class="mx-auto stat my-4">Additional Info</h4>
                                     <div class="container">
@@ -372,7 +464,13 @@
                 </div>
             </div>
             <div class="modal-footer">
+
+              <!--button to exit modal and cancel reservation-->
+
               <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
+
+              <!--button to make reservation. Saves user info into database-->
+
               <button type="button" class="btn btn-secondary stat rounded" id="makeRes">Reserve it!</button>
             </div>
           </div>
