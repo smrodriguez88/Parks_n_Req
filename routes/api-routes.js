@@ -1,31 +1,27 @@
 // Dependencies
-
-let Park = require("../models/park");
-let Camp = require("../models/camp");
-let Reservation = require("../models/reservation");
+let db = require("../models")
 const { Op } = require("sequelize");
 
 // Routes
 // =============================================================
 module.exports = function(app) {
-
   // Add sequelize code to get all parks and return them as JSON
   app.get("/api/all", function(req, res) {
-    Park.findAll({}).then(function(results){
+    db.Park.findAll({}).then(function(results){
       res.json(results);
     })
   });
   // Add sequelize code to get all camps and return them as JSON
   app.get("/api/all", function(req, res) {
-    Camp.findAll({}).then(function(results){
+    db.Camp.findAll({}).then(function(results){
       res.json(results);
     })
   });
 
 
   // Add sequelize code to get a specific park and return it as JSON
-  app.get("/api/:park", function(req, res) {
-    Park.findAll({
+  app.get("/api/park/:park", cors(corsOptions), function(req, res) {
+    db.Park.findAll({
       where: {
         parkCode: req.params.park
       }
@@ -35,8 +31,8 @@ module.exports = function(app) {
   });
 
   // Add sequelize code to get a specific camp and return it as JSON
-  app.get("/api/:camp", function(req, res) {
-    Camp.findAll({
+  app.get("/api/camp/:camp", function(req, res) {
+    db.Camp.findAll({
       where: {
         parkCode: req.params.camp
       }
@@ -47,8 +43,8 @@ module.exports = function(app) {
 
 
   // Add sequelize code to create a reservation
-  app.post("/api/new", function(req, res) {
-    Reservation.create({
+  app.post("/api/reservations/new", function(req, res) {
+    db.Reservation.create({
       startDate: req.body.startDate,
       endDate: req.body.endDate,
     //   parkCode: req.body.parkCode, 

@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes){
 
-    let Park = sequelize.define("park", {
+    let Park = sequelize.define("Park", {
         //GENERAL INFO
         url: {type: DataTypes.STRING, allowNull: true},
         fullName: {type: DataTypes.STRING, allowNull: false},

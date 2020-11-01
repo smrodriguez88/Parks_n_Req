@@ -1,28 +1,29 @@
 const express = require('express');
-
+const cors = require('cors')
 const PORT = process.env.PORT || 8080;
 
 const app = express();
 
 var db = require("./models");
-// app.use(express.static("public"));
 
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200
+}
 
-// let exphbs = require("express-handlebars");
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+// let routes = require("./routes/api-routes");
 
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
+// app.use(routes);
 
-let routes = require("./controllers/parks_controller");
+require("./routes/api-routes.js")(app);
 
-app.use(routes);
-
-db.sequelize.sync({ force: true })
-
-// db.sequelize.sync({ force: true }).then(function() {
-//   app.listen(PORT, function() {
-//     console.log("App listening on PORT " + PORT);
-//   });
-// });
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});
