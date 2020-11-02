@@ -70,7 +70,7 @@ $(document).ready(function(){
   console.log(`This is ${parkCode} from localStorage`)
   test = $.ajax({
     method: "GET",
-    url: `http://localhost:8080/api/park/${parkCode}`
+    url: `/api/park/${parkCode}`
   }).then(function(result) {
     console.log(result[0])
     console.log(`${result[0].images[0].url}`)
@@ -97,7 +97,7 @@ $(document).ready(function(){
 
   test2 = $.ajax({
     method: "GET",
-    url: `http://localhost:8080/api/camp/${parkCode}`
+    url: `/api/camp/${parkCode}`
   }).then(function(result) {
 
     if (result[0]){
@@ -159,7 +159,7 @@ $(document).ready(function(){
       pet: $('#inputPet').val()
     }
     
-    $.post("http://127.0.0.1:8080/api/reservations/new", body)
+    $.post("/api/reservations/new", body)
   })
   
     
