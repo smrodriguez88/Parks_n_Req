@@ -121,8 +121,10 @@ function parksParse(data){
                 'passDescription': each.entrancePasses[0] ? each.entrancePasses[0].description : "none",
                 'exceptions': each.operatingHours[0] ? each.operatingHours[0].exceptions : "none",
                 'hoursDescription': each.operatingHours[0] ? each.operatingHours[0].description : "none",
-                'standardHours': each.operatingHours[0] ? each.operatingHours[0].standardHours : "none"
+                'standardHours': each.operatingHours[0] ? each.operatingHours[0].standardHours : "none",
+                'images': each.images ? each.images : "none"
             }
+            console.log(entry)
             parksData.push(entry)
             
            
