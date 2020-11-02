@@ -6,14 +6,24 @@ const Sequelize = require("sequelize");
 let basename = path.basename(module.filename);
 let env = process.env.NODE_ENV || "development";
 let config = require(__dirname + "/../config/config.json")[env];
-let db = {};
+const db = {};
 
-if (config.use_env_letiable) {
-  var sequelize = new Sequelize(process.env[config.use_env_letiable]);
+let sequelize;
+if (process.env.JAWSDB_URL) {
+  // for Heroku
+  sequelize = new Sequelize(process.env.JAWSDB_URL, {});
 } else {
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
-
+  const env = process.env.NODE_ENV || "development";
+  const config = path.resolve(__dirname, "..", "config", "config.json")[env];
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
+
+// if (config.use_env_letiable) {
+//   var sequelize = new Sequelize(process.env[config.use_env_letiable]);
+// } else {
+//   var sequelize = new Sequelize(config.database, config.username, config.password, config);
+
+// }
 
 fs
   .readdirSync(__dirname)
