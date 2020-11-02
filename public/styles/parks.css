@@ -28,7 +28,7 @@ a {
 }
 
 .jumbotron {
-    background-color: #cccccc;
+    /* background-color: #cccccc; */
     color: white;
     height: 500px;
     margin-bottom: 0px;
@@ -76,3 +76,6 @@ a:hover {
     color: white;
 }
 
+.parkHours {
+    font-size: 10pt;
+}
