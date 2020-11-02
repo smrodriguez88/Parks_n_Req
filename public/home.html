@@ -33,6 +33,8 @@
 
     </nav> -->
 
+    <!--nav bar-->
+
     <nav class="navbar p-2">
         <span class="navbar-item stat">NPS Texas</span>
         <div class="navbar-item">
@@ -42,6 +44,8 @@
             <a class="nav-link raleway" href="#"><i class="fas fa-home"></i></a>
         </div>
     </nav>
+
+    <!--parallax images-->
 
     <div class="jumbotron jumbotron-fluid stat" id="first-section">
 
@@ -74,6 +78,8 @@
         <h1 class="title">TEXAS PARKS</h1>
     </div>
 
+
+    <!--image map code for each parks clickability-->
 
     <div class="jumbotron jumbotron-fluid stat">
 
@@ -134,8 +140,6 @@
             <div class="title2">PICK A PARK FROM THE MAP</div>
         </div>
 
-<!-- modal -->
-
   
   <!-- Modal -->
   <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -176,8 +180,12 @@
     <script src="./parks.js"></script>
     <script type="text/javascript">
 
+        //the function to make the map responsive
+
         $('map').imageMapResize();
 
+    // the function to append the title of each park in the modal when clicked on
+        
     $('area').click(function(event) {
         event.preventDefault();
         $(".parkCard").html($(this).attr("title"));  
