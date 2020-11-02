@@ -26,7 +26,9 @@ module.exports = function(sequelize, DataTypes){
         //OPERATING HOURS
         exceptions: {type: DataTypes.JSON, allowNull: true},
         hoursDescription: {type: DataTypes.TEXT, allowNull: true},
-        standardHours: {type: DataTypes.JSON, allowNull: true}
+        standardHours: {type: DataTypes.JSON, allowNull: true},
+        // IMAGES
+        images: {type: DataTypes.JSON, allowNull: true}
     });
 
     return Park;

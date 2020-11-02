@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   let Reservation = sequelize.define("Reservation", {
     startDate: DataTypes.STRING,
     endDate: DataTypes.STRING,
-    // parkCode: DataTypes.INTEGER,
+    parkCode: DataTypes.STRING,
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
     vehicleModel: DataTypes.STRING,
     vehicleYear: DataTypes.INTEGER,
     totalOccupants: DataTypes.INTEGER,
-    pet: DataTypes.BOOLEAN
+    pet: DataTypes.STRING
   });
 
   Reservation.associate = function(models) {

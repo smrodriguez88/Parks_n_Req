@@ -130,6 +130,16 @@ gsap.to(".content", {
 
   });
 
+
+  gsap.to("#star", { 
+    y: -300,
+    x: 100,
+    duration: 60,  
+    ease: "none"
+
+  });
+  
+
 // gsap.to(".content", {
 //     scrollTrigger: {
 //         trigger: "top", 

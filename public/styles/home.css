@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    transition: opacity 2s;
     overflow-x: hidden;
 
 }
@@ -23,6 +22,18 @@ body {
     font-family: "Staatliches";
     font-size: 1.3em;
     margin-left: 30px;
+}
+
+.reservationnavbar{
+    width: 100%;
+    display: flex;
+    background-color: rgba(133, 141, 130, 0);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    padding: 20px 0;
 }
 
 .btn {
@@ -54,6 +65,19 @@ a:hover {
 .title2{
     position: absolute;
     top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-family: "Staatliches";
+    letter-spacing: 9px;
+    font-size: 40px;
+    z-index: 0;
+}
+
+
+.reservation{
+    position: fixed;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     color:white;
@@ -129,6 +153,31 @@ a:hover {
     text-align: center;
     
 }
+
+.fa-chevron-down{
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    animation: bounce 2s infinite;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size: 50px;
+    z-index: 0;
+}
+
+
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
 
 /* .tooltip {
     position: relative;
