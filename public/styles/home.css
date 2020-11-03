@@ -147,11 +147,16 @@ a:hover {
     font-family: "Raleway";
 }
 
-.modal-body {
-    background-color: #51594C !important;
-    color: white !important;
-    text-align: center;
-    
+.modal-body7 {
+    background-color: #51594C;
+     color: white;
+    font-size : 36pt;
+}
+
+.card {
+    border: solid 3px #FFFFFF;
+    background-color: #667353;
+    color: #FFFFFF;
 }
 
 .fa-chevron-down{

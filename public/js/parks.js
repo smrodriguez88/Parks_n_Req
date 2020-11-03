@@ -1,12 +1,6 @@
 $(document).ready(function () {
     
-    // let modal = $("#modal4");
-    
-    // if (modal.hasClass("visible") === true) {
-    //     modal.removeClass("visible").addClass("invisible");
-    //   } else if (modal.hasClass("invisible") === true) {
-    //     modal.removeClass("invisible").addClass("visible");
-    //   }
+  //modal code for the parks page from on click events
       
     function activitiesModal(){
         let button = $('#activitiesBtn');
@@ -58,12 +52,16 @@ $(document).ready(function () {
       })
   }
 
+  //saving the park code in local storage to be used on parks.html info
+
   $('area').click(function(){
     console.log($(this).attr("data-parkcode"));
     localStorage.setItem("parkCode", $(this).attr("data-parkcode"));
   }) 
 
 });
+
+//function to fill parks.html with data for park chosen by the user on the image map
 
 $(document).ready(function(){
   parkCode = localStorage.getItem("parkCode")
@@ -140,6 +138,8 @@ $(document).ready(function(){
       $('#resBtn').hide()
     }
   })
+
+  //saving res info into database
 
   $('#makeRes').click(function(req, res) {
     arrivalDate = `${$('#arrivalMonth').val()}/${$('#arrivalDay').val()}/${$('#arrivalYear').val()}`
