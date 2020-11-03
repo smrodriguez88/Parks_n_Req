@@ -71,6 +71,7 @@ $(document).ready(function(){
     url: `/api/park/${parkCode}`
   }).then(function(result) {
     console.log(result[0])
+    localStorage.setItem('parkName', result[0].fullName)
     console.log(`${result[0].images[0].url}`)
     $('#parkName').html(result[0].fullName)
     $('#monday').html(result[0].standardHours.monday)
@@ -81,7 +82,7 @@ $(document).ready(function(){
     $('#saturday').html(result[0].standardHours.saturday)
     $('#sunday').html(result[0].standardHours.sunday)
     $('#contact').html(`<li> Phone Number:  <a href="tel:${result[0].phoneNumber}">${result[0].phoneNumber}</a> </li> <li> Email: <a href="mailto:${result[0].email}">${result[0].email}</a> </li>`)
-    $('#address').html(`<li> <a href="http://maps.google.com/?q=${result[0].line1} ${result[0].city} ${result[0].stateCode}">${result[0].line1}, ${result[0].city}, ${result[0].stateCode}</a> </li>`)
+    $('#address').html(`<li> <a href="http://maps.google.com/?q=${result[0].line1} ${result[0].city} ${result[0].stateCode}" target="_blank">${result[0].line1}, ${result[0].city}, ${result[0].stateCode}</a> </li>`)
     $('#parkInfo').html(result[0].description)
     $('#passPrice').html(`<li> Day Pass Cost: $ ${result[0].passCost} </li>`)
     $('#jumboImg').css({'background' : `linear-gradient(rgba(18, 18, 19, 0.50), rgba(18, 18, 19, 0.25)), url("${result[0].images[0].url}")`, 'background-size' : `cover`})
@@ -158,7 +159,9 @@ $(document).ready(function(){
       totalOccupants: $('#inputOcc').val(),
       pet: $('#inputPet').val()
     }
-    
+    localStorage.setItem("resEmail", body.email)
+    localStorage.setItem("resName", `${body.firstName} ${body.lastName}`)
+    localStorage.setItem("resDates", `${body.startDate} - ${body.endDate}`)
     $.post("/api/reservations/new", body)
   })
   

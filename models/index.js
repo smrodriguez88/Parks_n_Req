@@ -14,7 +14,8 @@ if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL, {});
 } else {
   const env = process.env.NODE_ENV || "development";
-  const config = path.resolve(__dirname, "..", "config", "config.json")[env];
+  // const config = path.resolve(__dirname, "..", "config", "config.json")[env];
+  let config = require(__dirname + "/../config/config.json")[env];
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
