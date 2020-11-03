@@ -12,7 +12,7 @@ $('map').imageMapResize();
 
     $('area').click(function(event) {
         event.preventDefault();
-        $(".modal-body").html($(this).attr("title"));  
+        $(".parkCard").html($(this).attr("title"));  
         
         console.log($(this).attr("title"))
     })
