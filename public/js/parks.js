@@ -133,9 +133,9 @@ $(document).ready(function(){
       $('#foodStorageLockers').text(result[0].foodStorageLockers)
     } else {
       $('#campInfo').text("This park has no associated campgrounds")
-      $('#regsInfo').text("N/A")
-      $('#amenitiesInfo').text("N/A")
-      $('#accessibilityInfo').text("N/A")
+      $('#accInfoBtn').hide();
+      $('#regulationsBtn').hide();
+      $('amenitiesBtn').hide();
       $('#resBtn').hide()
     }
   })
