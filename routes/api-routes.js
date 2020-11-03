@@ -5,6 +5,10 @@ const { Op } = require("sequelize");
 // Routes
 // =============================================================
 module.exports = function(app) {
+
+  app.get("/", function (req, res){
+    res.sendFile("/home.html")
+  })
   // Add sequelize code to get all parks and return them as JSON
   app.get("/api/all", function(req, res) {
     db.Park.findAll({}).then(function(results){

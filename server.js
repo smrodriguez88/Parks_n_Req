@@ -10,7 +10,7 @@ app.use(express.urlencoded());
 // let routes = require("./routes/api-routes");
 
 // app.use(routes);
-
+app.use(express.static('public'))
 require("./routes/api-routes.js")(app);
 
 db.sequelize.sync({ force: true }).then(function() {
