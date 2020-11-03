@@ -133,7 +133,7 @@ $(document).ready(function(){
       $('#foodStorageLockers').text(result[0].foodStorageLockers)
     } else {
       $('#campInfo').text("This park has no associated campgrounds")
-      $('#regulationsInfo').text("N/A")
+      $('#regsInfo').text("N/A")
       $('#amenitiesInfo').text("N/A")
       $('#accessibilityInfo').text("N/A")
       $('#resBtn').hide()
@@ -159,7 +159,9 @@ $(document).ready(function(){
       totalOccupants: $('#inputOcc').val(),
       pet: $('#inputPet').val()
     }
-    
+    localStorage.setItem("resEmail", body.email)
+    localStorage.setItem("resName", `${body.firstName} ${body.lastName}`)
+    localStorage.setItem("resDates", `${body.startDate} - ${body.endDate}`)
     $.post("/api/reservations/new", body)
   })
   
