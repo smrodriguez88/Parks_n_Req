@@ -7,7 +7,7 @@ const { Op } = require("sequelize");
 module.exports = function(app) {
 
   app.get("/", function (req, res){
-    res.sendFile("../public/home.html") 
+    res.sendFile('home.html', { root: __dirname }); 
   })
   // Add sequelize code to get all parks and return them as JSON
   app.get("/api/all", function(req, res) {
