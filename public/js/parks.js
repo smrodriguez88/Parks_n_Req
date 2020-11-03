@@ -135,7 +135,7 @@ $(document).ready(function(){
       $('#campInfo').text("This park has no associated campgrounds")
       $('#accInfoBtn').hide();
       $('#regulationsBtn').hide();
-      $('amenitiesBtn').hide();
+      $('#amenitiesBtn').hide();
       $('#resBtn').hide()
     }
   })
