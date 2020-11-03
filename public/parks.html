@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./styles/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="stylesheet" href="parks.css">
+    <link rel="stylesheet" href="./styles/parks.css">
     <title></title>
 </head>
 <body>
 
     <!--image jumbotron-->
 
-    <div class="jumbotron jumbotron-fluid stat" style='background-image: linear-gradient(rgba(18, 18, 19, 0.50), rgba(18, 18, 19, 0.25)), url("https://tpwd.texas.gov/state-parks/palo-duro-canyon/gallery/lighthouse-peak.jpg")'>
+    <div class="jumbotron jumbotron-fluid stat" id="jumboImg">
+      
         <div class="container">
 
           <!--data from database will render in h1 tag-->
@@ -49,16 +50,28 @@
         <div class="col-md-3">
             <div class="card m-2 p-3 my-5 rounded">
                 <h5 class="stat mx-auto">General Info</h5>
-                <ul class="raleway mx-auto">
-
-                    <!--data rendered from the database in list items-->
-
-                    <li id="opHours"></li>
-                    <li id="contact"></li>
-                    <li id="address"></li>
-                </ul>
-            </div>
-        </div>
+                  <div class="raleway text-center">
+                      <h6 class="stat">Park Hours</h6>
+                      <ul>
+                        <li>Monday: <span id="monday"></span></li>
+                        <li>Tuesday: <span id="tuesday"></span></li>
+                        <li>Wednesday: <span id="wednesday"></span></li>
+                        <li>Thursday: <span id="thursday"></span></li>
+                        <li>Friday: <span id="friday"></span></li>
+                        <li>Saturday: <span id="saturday"></span></li>
+                        <li>Sunday: <span id="sunday"></span></li>
+                      </ul>
+                  </div>
+                  <div class="raleway text-center">
+                    <h6 class="stat">Contact Info</h6>
+                    <p id="contact"></p>
+                  </div>
+                  <div class="raleway text-center">
+                    <h6 class="stat">Address Info</h6>
+                    <p id="address"></p>
+                  </div>
+              </div>
+          </div>
 
         <!--description card-->
 
@@ -80,16 +93,18 @@
 
                 <!--data rendered from the database in p tag-->
 
-                <p class="raleway" id="campInfo">
+                <p class="raleway">
+                    <p id="campInfo"></p>
+                    
                     <br>
-                    <br>
-
+        
                     <!--button for amenities modal-->
 
                     <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal2" id="amenitiesBtn">Amenities</button>
                     
                     <!--button for regulations modal-->
                     
+                    <br>
                     <button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal3" id="regulationsBtn">Regulations</button>
 
                   </p>
@@ -109,11 +124,15 @@
                         <li id="passPrice"></li>
                     </ul>
                     <h5 class="card-title stat">Camping</h5>
-                    <ul class="raleway"> 
+                    <p class="raleway"> 
 
                         <!--button to open reservations modal-->
 
-                        <li><button type="button" class="btn stat rounded" data-toggle="modal" data-target="#modal4" id="resBtn">Reserve your spot!</button></li>
+                        <button type="button" class="btn stat rounded m-1" data-toggle="modal" data-target="#modal4" id="resBtn">Reserve your spot!</button>
+                        
+                        <!--button for accessibility-->
+                        
+                        <button type="button" class="btn stat rounded m-1" data-toggle="modal" data-target="#modal5" id="accInfoBtn">Accessibility Info</button>
                     </ul>
                 </div>
             </div>
@@ -173,11 +192,18 @@
         <div class="modal-body raleway">
             <div class="col-md-6 mx-auto">
                 <div class="card m-2 p-3 my-5 rounded">
-                    <h5 class="stat mx-auto">Amenities</h5>
+                    <h5 class="stat mx-auto" id="amenitiesInfo">Amenities</h5>
 
                     <!--p tag where database info is rendered-->
                   
-                    <p class="raleway mx-auto" id="amenitiesInfo"></p>
+                    <p class="raleway text-center" id="trashRecyclingCollection"></p>
+                    <p class="raleway text-center" id="toilets"></p>
+                    <p class="raleway text-center" id="internetConnectivity"></p>
+                    <p class="raleway text-center" id="Showers"></p>
+                    <p class="raleway text-center" id="cellPhoneReceptions"></p>
+                    <p class="raleway text-center" id="laundry"></p>
+                    <p class="raleway text-center" id="amphitheater"></p>
+                    <p class="raleway text-center" id="trashRecyclingCollection"></p>
                 </div>
             </div>
         </div>
@@ -477,6 +503,52 @@
         </div>
       </div>
 
+  <!--accessibility modal-->
+
+<div class="modal fade bd-example-modal-lg" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+
+        <!--top right corner exit button-->
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="col-md-6 mx-auto">
+              <div class="card m-2 p-3 my-5 rounded">
+                  <h5 class="stat mx-auto" id="accessibilityInfo">Park Accessibility</h5>
+
+                  <!--p tags where database info is rendered-->
+                  <p class="raleway text-center" id="wheelchairAccess"></p>
+                  <p class="raleway text-center" id="internetInfo"></p>
+                  <p class="raleway text-center" id="cellPhoneInfo"></p>
+                  <p class="raleway text-center" id="fireStovePolicy"></p>
+                  <p class="raleway text-center" id="rvAllowed"></p>
+                  <p class="raleway text-center" id="rvInfo"></p>
+                  <p class="raleway text-center" id="rvMaxLength"></p>
+                  <p class="raleway text-center" id="additionalInfo"></p>
+                  <p class="raleway text-center" id="trailerAllowed"></p>
+                  <p class="raleway text-center" id="trailerMaxLength"></p>
+                  <p class="raleway text-center" id="adaInfo"></p>
+                  <p class="raleway text-center" id="acessRoads"></p>
+                  <p class="raleway text-center" id="classifications"></p>
+              </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+
+        <!--button to close the modal-->
+
+        <button type="button" class="btn btn-secondary stat rounded" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
       <!-- Footer -->
 <footer class="page-footer font-small cyan darken-3">
 
@@ -529,6 +601,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="parks.js"></script>
+  <script src="./js/parks.js"></script>
 </body>
 </html>
