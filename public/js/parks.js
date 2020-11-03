@@ -132,7 +132,7 @@ $(document).ready(function(){
       $('#foodStorageLockers').text(result[0].foodStorageLockers)
     } else {
       $('#campInfo').text("This park has no associated campgrounds")
-      $('#regulationsInfo').text("N/A")
+      $('#regsInfo').text("N/A")
       $('#amenitiesInfo').text("N/A")
       $('#accessibilityInfo').text("N/A")
       $('#resBtn').hide()
