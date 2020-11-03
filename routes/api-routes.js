@@ -1,13 +1,15 @@
 // Dependencies
 let db = require("../models")
 const { Op } = require("sequelize");
+const path = require("path");
 
 // Routes
 // =============================================================
 module.exports = function(app) {
 
   app.get("/", function (req, res){
-    res.sendFile('home.html', { root: __dirname }); 
+    res.sendFile('home.html', { root: path.resolve(__dirname, '../public') }); 
+    
   })
   // Add sequelize code to get all parks and return them as JSON
   app.get("/api/all", function(req, res) {
