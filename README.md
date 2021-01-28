@@ -41,21 +41,21 @@ node server
 and it open the browser and run the application
 
  ## Technologies Used
- HTML5
- CSS3
- Bootstrap4
- ScrollTrigger By GSAP
- JavaScript
- jQuery
- MySQL
- Sequelize
- Node.js
- Express.js
+ ▹ HTML5
+ ▹ CSS3
+ ▹ Bootstrap4
+ ▹ ScrollTrigger By GSAP
+ ▹ JavaScript
+ ▹ jQuery
+ ▹ MySQL
+ ▹ Sequelize
+ ▹ Node.js
+ ▹ Express.js
 
   ## Contributors 
- Steve Rodriguez : Back-end 
- Lili Clift : Back-end & Front-end 
- Ashli Hanson : Front-end 
- Nay Wilkins : Front-end 
+ ◇ Steve Rodriguez : Back-end 
+ ◇ Lili Clift : Back-end & Front-end 
+ ◇ Ashli Hanson : Front-end 
+ ◇ Nay Wilkins : Front-end 
  ## License  [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/) 
  Copyright (c) 2020 Parks_n_Req Licensed under the Unlicense license.
